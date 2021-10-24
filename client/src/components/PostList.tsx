@@ -1,11 +1,11 @@
-import PostPreview from "./PostPreview";
+import PostPreview from './PostPreview'
 
 const PostList = () => {
-    return (
+  return (
         <ul>
             <li><PostPreview></PostPreview></li>
         </ul>
-    )
+  )
 }
 
-export default PostList;
+export default PostList

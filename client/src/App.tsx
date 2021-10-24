@@ -1,17 +1,17 @@
-import React from 'react';
-import Home from './components/screens/Home';
+import React from 'react'
+import Home from './components/screens/Home'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-} from "react-router-dom";
-import SinglePost from './components/screens/SinglePost';
+  Route
+} from 'react-router-dom'
+import SinglePost from './components/screens/SinglePost'
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-      <Switch>
+        <Switch>
           <Route path="/post">
             <SinglePost />
           </Route>
@@ -21,7 +21,7 @@ const App = () => {
         </Switch>
       </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

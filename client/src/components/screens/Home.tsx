@@ -1,15 +1,15 @@
-import Footer from "../Footer"
-import Header from "../Header"
-import PostList from "../PostList"
+import Footer from '../Footer'
+import Header from '../Header'
+import PostList from '../PostList'
 
 const Home = () => {
-    return (
+  return (
         <div>
             <Header></Header>
             <PostList></PostList>
             <Footer></Footer>
         </div>
-    )
+  )
 }
 
 export default Home
