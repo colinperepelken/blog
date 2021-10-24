@@ -1,6 +1,6 @@
 import PostPreview from "./PostPreview";
 
-function PostList() {
+const PostList = () => {
     return (
         <ul>
             <li><PostPreview></PostPreview></li>
