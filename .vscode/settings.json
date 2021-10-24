@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
         "Perepelken's"
-    ]
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript"]
 }
