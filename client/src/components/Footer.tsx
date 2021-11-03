@@ -1,6 +1,8 @@
+import { config } from '../config'
+
 const Footer = () => {
   return (
-        <footer><p>Copyright &copy; {new Date().getFullYear() } <a href="https://perepelken.ca">Colin Perepelken</a></p></footer>
+        <footer><p>Copyright &copy; {new Date().getFullYear() } <a href={config.copyrightUrl}>{config.copyrightText}</a></p></footer>
   )
 }
 

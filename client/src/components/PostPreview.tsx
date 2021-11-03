@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom'
+import { IPostPreview } from '../types/PostTypes'
 
-const PostPreview = () => {
+interface IProps {
+  post: IPostPreview
+}
+
+const PostPreview = (props: IProps) => {
   return (
     <div>
-        <h2><Link to="/post">Post title</Link></h2>
-        <p>Posted June 13th, 2021</p>
+        <h2><Link to={`/post/${props.post.id}`}>{props.post.title}</Link></h2>
+        <p>{props.post.previewText}</p>
+        <p>Posted {props.post.createdAt}</p>
     </div>
   )
 }

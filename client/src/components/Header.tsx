@@ -1,6 +1,8 @@
+import { config } from '../config'
+
 const Header = () => {
   return (
-        <h1>Colin Perepelken&apos;s Blog</h1>
+        <h1>{config.title}</h1>
   )
 }
 
