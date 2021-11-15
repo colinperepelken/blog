@@ -1,9 +1,8 @@
 {
-    "cSpell.words": [
-        "Perepelken",
-    ],
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "eslint.validate": ["javascript"]
+  "cSpell.words": ["Perepelken", "tinymce"],
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
