@@ -8,7 +8,7 @@ import EditPost from './components/screens/EditPost'
 
 const App = () => {
     return (
-         <div className="App">
+        <div className="App">
             <Header />
             <Router>
                 <Switch>

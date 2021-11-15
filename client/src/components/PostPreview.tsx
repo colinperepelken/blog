@@ -9,9 +9,7 @@ const PostPreview = (props: IProps) => {
     return (
         <div>
             <h2>
-                <Link to={`/post/${props.post.id}/view`}>
-                    {props.post.title}
-                </Link>
+                <Link to={`/post/${props.post.id}/view`}>{props.post.title}</Link>
             </h2>
             <p>{props.post.previewText}</p>
             <p>Posted {props.post.createdAt}</p>

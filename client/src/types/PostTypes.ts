@@ -7,9 +7,6 @@ export interface IPostDetails {
     createdAt: number
     updatedAt: number
 }
-export type IPostPreview = Pick<
-    IPostDetails,
-    'id' | 'title' | 'imageUrl' | 'createdAt'
-> & {
+export type IPostPreview = Pick<IPostDetails, 'id' | 'title' | 'imageUrl' | 'createdAt'> & {
     previewText: string
 }
