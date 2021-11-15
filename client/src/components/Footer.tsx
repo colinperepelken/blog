@@ -4,7 +4,8 @@ const Footer = () => {
     return (
         <footer>
             <p>
-                Copyright &copy; {new Date().getFullYear()} <a href={config.copyrightUrl}>{config.copyrightText}</a>
+                Copyright &copy; {new Date().getFullYear()}{' '}
+                <a href={config.copyrightUrl}>{config.copyrightText}</a>
             </p>
         </footer>
     )
