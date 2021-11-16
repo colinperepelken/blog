@@ -6,18 +6,16 @@ const examplePost: IPostPreview = {
     title: 'First blog post',
     previewText: 'Preview text for this blog post',
     imageUrl: '#',
-    createdAt: 123,
+    createdAt: 1637032829,
 }
 
 const PostList = () => {
     // TODO fetch lists of posts for this page
     // TODO add pagination eventually
     return (
-        <ul>
-            <li>
-                <PostPreview post={examplePost}></PostPreview>
-            </li>
-        </ul>
+        <div className="max-w-screen-sm mx-auto">
+            <PostPreview post={examplePost}></PostPreview>
+        </div>
     )
 }
 

@@ -4,5 +4,6 @@
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "tailwindCSS.includeLanguages": { "plaintext": "javascript" }
 }
