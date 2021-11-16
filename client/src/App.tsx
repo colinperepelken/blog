@@ -12,9 +12,11 @@ const App = () => {
             <Header />
             <Router>
                 <Switch>
-                    <Route path="/post/:id/view" component={SinglePost} />
-                    <Route path="/post/:id/edit" component={EditPost} />
-                    <Route path="/" component={Home} />
+                    <div className="max-w-screen-sm mx-auto">
+                        <Route path="/post/:id/view" component={SinglePost} />
+                        <Route path="/post/:id/edit" component={EditPost} />
+                        <Route path="/" component={Home} />
+                    </div>
                 </Switch>
             </Router>
             <Footer />

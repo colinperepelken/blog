@@ -13,7 +13,7 @@ const PostList = () => {
     // TODO fetch lists of posts for this page
     // TODO add pagination eventually
     return (
-        <div className="max-w-screen-sm mx-auto">
+        <div>
             <PostPreview post={examplePost}></PostPreview>
         </div>
     )

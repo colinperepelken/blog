@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Button from '../base/Button'
 
 interface IProps {
     postId: string
@@ -9,7 +10,9 @@ const SinglePost = (props: IProps) => {
 
     return (
         <div>
-            <Link to="/">Back</Link>
+            <Link to="/">
+                <Button title="Back"></Button>
+            </Link>
             <div>
                 <article>
                     <h2>Post title</h2>
