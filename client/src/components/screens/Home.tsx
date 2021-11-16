@@ -1,4 +1,5 @@
 import Button from '../base/Button'
+import Card from '../base/Card'
 import PostList from '../PostList'
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <PostList></PostList>
             <Button title="Example button" />
+            <Card content="Test card content!"></Card>
         </div>
     )
 }
