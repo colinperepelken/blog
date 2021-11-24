@@ -7,13 +7,8 @@ interface IProps {
 }
 
 const Card = (props: IProps) => (
-    <div className="border p-2">
-        <div
-            className="text-lg uppercase font-bold cursor-pointer"
-            onClick={props.onClick}
-        >
-            {props.title}
-        </div>
+    <div>
+        <div onClick={props.onClick}>{props.title}</div>
         <div>{props.content}</div>
         {renderButtons(props.buttons)}
     </div>

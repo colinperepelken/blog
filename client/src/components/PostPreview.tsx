@@ -24,9 +24,7 @@ const PostPreview = (props: IProps) => {
 const getContent = (post: IPostPreview) => (
     <div>
         <p>{post.previewText}</p>
-        <p className="font-extralight">
-            Posted {DateTimeFormatter.secondsToDate(post.createdAt)}
-        </p>
+        <p>Posted {DateTimeFormatter.secondsToDate(post.createdAt)}</p>
     </div>
 )
 

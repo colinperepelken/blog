@@ -8,17 +8,25 @@ import EditPost from './components/screens/EditPost'
 
 const App = () => {
     return (
-        <div className="App container mx-auto">
+        <div className="App">
             <Header />
-            <Router>
-                <Switch>
-                    <div className="max-w-screen-sm mx-auto">
-                        <Route path="/post/:id/view" component={SinglePost} />
-                        <Route path="/post/:id/edit" component={EditPost} />
-                        <Route path="/" component={Home} />
-                    </div>
-                </Switch>
-            </Router>
+            <div>
+                <Router>
+                    <Switch>
+                        <Route
+                            exact
+                            path="/post/:id/view"
+                            component={SinglePost}
+                        />
+                        <Route
+                            exact
+                            path="/post/:id/edit"
+                            component={EditPost}
+                        />
+                        <Route exact path="/" component={Home} />
+                    </Switch>
+                </Router>
+            </div>
             <Footer />
         </div>
     )
