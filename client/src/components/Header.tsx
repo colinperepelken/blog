@@ -1,9 +1,19 @@
+import styled from 'styled-components'
 import { config } from '../config'
 
+const HeaderWrapper = styled.div`
+    margin-left: auto;
+    margin-right: auto;
+`
+
+const Title = styled.h1`
+    text-align: center;
+`
+
 const Header = () => (
-    <div>
-        <h1>{config.title}</h1>
-    </div>
+    <HeaderWrapper>
+        <Title>{config.title}</Title>
+    </HeaderWrapper>
 )
 
 export default Header
