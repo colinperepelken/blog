@@ -1,13 +1,19 @@
+import styled from 'styled-components'
 import { config } from '../config'
+
+const StyledFooter = styled.footer`
+    margin-top: 6rem;
+    text-align: center;
+`
 
 const Footer = () => {
     return (
-        <footer className="text-center mt-6 font-thin">
+        <StyledFooter>
             <p>
                 Copyright &copy; {new Date().getFullYear()}{' '}
                 <a href={config.copyrightUrl}>{config.copyrightText}</a>
             </p>
-        </footer>
+        </StyledFooter>
     )
 }
 
