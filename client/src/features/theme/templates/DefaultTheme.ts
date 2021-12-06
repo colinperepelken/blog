@@ -12,7 +12,7 @@ const DefaultTheme: ITheme = {
     primary: BaseColors.green,
     secondary: BaseColors.blue,
     background: BaseColors.blackAlt,
-    border: 'grey',
+    border: BaseColors.brown,
 }
 
 export default DefaultTheme

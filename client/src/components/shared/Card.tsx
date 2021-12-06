@@ -1,4 +1,7 @@
+import styled from 'styled-components'
+import { Theme } from '../../features/theme/Theme'
 import Button, { IButtonProps } from './Button'
+
 interface IProps {
     content: JSX.Element | string
     title?: string
@@ -6,12 +9,21 @@ interface IProps {
     onClick?: () => void
 }
 
+const StyledCard = styled.div`
+    border: 1px solid ${Theme.border};
+`
+
+const CardTitle = styled.h2`
+    color: ${Theme.primary};
+    cursor: pointer;
+`
+
 const Card = (props: IProps) => (
-    <div>
-        <div onClick={props.onClick}>{props.title}</div>
+    <StyledCard>
+        <CardTitle onClick={props.onClick}>{props.title}</CardTitle>
         <div>{props.content}</div>
         {renderButtons(props.buttons)}
-    </div>
+    </StyledCard>
 )
 
 const renderButtons = (buttons?: IButtonProps[]) => {

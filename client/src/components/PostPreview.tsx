@@ -1,8 +1,8 @@
 import { useHistory } from 'react-router-dom'
 import { DateTimeFormatter } from '../features/DateTimeFormatter'
 import { IPostPreview } from '../types/PostTypes'
-import { IButtonProps } from './base/Button'
-import Card from './base/Card'
+import { IButtonProps } from './shared/Button'
+import Card from './shared/Card'
 
 interface IProps {
     post: IPostPreview
