@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { config } from '../config'
+import Link from './shared/Link'
 
 const StyledFooter = styled.footer`
     margin-top: 6rem;
@@ -11,7 +12,7 @@ const Footer = () => {
         <StyledFooter>
             <p>
                 Copyright &copy; {new Date().getFullYear()}{' '}
-                <a href={config.copyrightUrl}>{config.copyrightText}</a>
+                <Link href={config.copyrightUrl}>{config.copyrightText}</Link>
             </p>
         </StyledFooter>
     )

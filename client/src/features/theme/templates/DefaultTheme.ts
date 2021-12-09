@@ -6,13 +6,15 @@ const BaseColors = {
     green: '#59C9A5',
     brown: '#C19875',
     red: '#AF5B5B',
+    lightGrey: '#ededed',
 }
 
 const DefaultTheme: ITheme = {
     primary: BaseColors.green,
     secondary: BaseColors.blue,
     background: BaseColors.blackAlt,
-    border: BaseColors.brown,
+    border: BaseColors.red,
+    boxShadow: BaseColors.lightGrey,
 }
 
 export default DefaultTheme

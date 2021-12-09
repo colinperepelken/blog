@@ -11,6 +11,13 @@ interface IProps {
 
 const StyledCard = styled.div`
     border: 1px solid ${Theme.border};
+    box-shadow: 5px 10px 5px ${Theme.boxShadow};
+    border-radius: 5px;
+    padding: 1rem 3rem;
+`
+
+const CardButton = styled(Button)`
+    margin-right: 0.5rem;
 `
 
 const CardTitle = styled.h2`
@@ -27,8 +34,8 @@ const Card = (props: IProps) => (
 )
 
 const renderButtons = (buttons?: IButtonProps[]) => {
-    buttons?.map((buttonProps, index) => (
-        <Button key={index} {...buttonProps}></Button>
+    return buttons?.map((buttonProps, index) => (
+        <CardButton key={index} {...buttonProps}></CardButton>
     ))
 }
 

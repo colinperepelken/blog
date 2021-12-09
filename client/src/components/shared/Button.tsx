@@ -5,6 +5,7 @@ export interface IButtonProps {
     title: string
     onClick?: () => void
     primary?: boolean
+    className?: string
 }
 
 const StyledButton = styled.button<Pick<IButtonProps, 'primary'>>`
@@ -20,8 +21,10 @@ const StyledButton = styled.button<Pick<IButtonProps, 'primary'>>`
     }
 `
 
-const Button = (props: IButtonProps) => {
-    return <StyledButton>{props.title}</StyledButton>
-}
+const Button = (props: IButtonProps) => (
+    <StyledButton onClick={props.onClick} className={props.className}>
+        {props.title}
+    </StyledButton>
+)
 
 export default Button
