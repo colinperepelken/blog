@@ -1,4 +1,4 @@
-export interface IPostDetails {
+export interface IArticleDetails {
     id: number
     title: string
     imageUrl: string
@@ -7,9 +7,13 @@ export interface IPostDetails {
     createdAt: number
     updatedAt: number
 }
-export type IPostPreview = Pick<
-    IPostDetails,
+export type IArticlePreview = Pick<
+IArticleDetails,
     'id' | 'title' | 'imageUrl' | 'createdAt'
 > & {
     previewText: string
 }
+
+export type IArticlePostRequest = Omit<IArticleDetails, 'id'>
+
+export type IArticlePatchRequest = Partial<IArticleDetails>

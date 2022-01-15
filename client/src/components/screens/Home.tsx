@@ -1,9 +1,9 @@
-import PostList from '../PostList'
+import ArticleList from '../ArticleList'
 
 const Home = () => {
     return (
         <div>
-            <PostList></PostList>
+            <ArticleList></ArticleList>
         </div>
     )
 }

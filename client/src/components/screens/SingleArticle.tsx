@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 import Button from '../shared/Button'
 
 interface IProps {
-    postId: string
+    articleId: string
 }
 
-const SinglePost = (props: IProps) => {
-    // TODO make call to API with postId and get post title and content
+const SingleArticle = (props: IProps) => {
+    // TODO make call to API with articleId and get post title and content
 
     return (
         <div>
@@ -25,4 +25,4 @@ const SinglePost = (props: IProps) => {
     )
 }
 
-export default SinglePost
+export default SingleArticle

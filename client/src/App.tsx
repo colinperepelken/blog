@@ -1,10 +1,10 @@
 import React from 'react'
 import Home from './components/screens/Home'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import SinglePost from './components/screens/SinglePost'
+import SingleArticle from './components/screens/SingleArticle'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import EditPost from './components/screens/EditPost'
+import EditPost from './components/screens/EditArticle'
 
 const App = () => {
     return (
@@ -15,12 +15,12 @@ const App = () => {
                     <Switch>
                         <Route
                             exact
-                            path="/post/:id/view"
-                            component={SinglePost}
+                            path="/article/:id/view"
+                            component={SingleArticle}
                         />
                         <Route
                             exact
-                            path="/post/:id/edit"
+                            path="/article/:id/edit"
                             component={EditPost}
                         />
                         <Route exact path="/" component={Home} />

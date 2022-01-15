@@ -1,11 +1,11 @@
 import { Editor } from '@tinymce/tinymce-react'
-import { IPostDetails } from '../../types/PostTypes'
+import { IArticleDetails } from '@api/types/ArticleTypes'
 
 interface IProps {
-    post: IPostDetails
+    article: IArticleDetails
 }
 
-const PostForm = (props: IProps) => {
+const ArticleForm = (props: IProps) => {
     return (
         <form>
             <label>
@@ -17,4 +17,4 @@ const PostForm = (props: IProps) => {
     )
 }
 
-export default PostForm
+export default ArticleForm

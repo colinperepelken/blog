@@ -1,12 +1,12 @@
+import { IArticleDetails } from '@blog/shared-types'
 import { Link } from 'react-router-dom'
-import PostForm from '../form/PostForm'
-import { IPostDetails } from '../../types/PostTypes'
+import ArticleForm from '../form/ArticleForm'
 
 interface IProps {
-    postId: string
+    articleId: string
 }
 
-const examplePost: IPostDetails = {
+const exampleArticle: IArticleDetails = {
     id: 1,
     title: 'First blog post',
     imageUrl: '#',
@@ -24,7 +24,7 @@ const EditPost = (props: IProps) => {
             <Link to="/">Back</Link>
             <div>
                 <article>
-                    <PostForm post={examplePost} />
+                    <ArticleForm article={exampleArticle} />
                 </article>
             </div>
         </div>

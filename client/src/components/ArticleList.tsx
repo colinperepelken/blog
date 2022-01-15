@@ -1,7 +1,7 @@
-import { IPostPreview } from '../types/PostTypes'
-import PostPreview from './PostPreview'
+import { IArticlePreview } from '@blog/shared-types'
+import ArticlePreview from './ArticlePreview'
 
-const examplePost: IPostPreview = {
+const examplePost: IArticlePreview = {
     id: 1,
     title: 'First blog post',
     previewText: 'Preview text for this blog post',
@@ -9,14 +9,14 @@ const examplePost: IPostPreview = {
     createdAt: 1637032829,
 }
 
-const PostList = () => {
+const ArticleList = () => {
     // TODO fetch lists of posts for this page
     // TODO add pagination eventually
     return (
         <div>
-            <PostPreview post={examplePost}></PostPreview>
+            <ArticlePreview article={examplePost} />
         </div>
     )
 }
 
-export default PostList
+export default ArticleList

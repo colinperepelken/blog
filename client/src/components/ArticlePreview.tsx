@@ -1,13 +1,13 @@
+import { IArticlePreview } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { AuthenticationProvider } from '../features/authentication/AuthenticationProvider'
 import { DateTimeFormatter } from '../features/DateTimeFormatter'
-import { IPostPreview } from '../types/PostTypes'
 import { IButtonProps } from './shared/Button'
 import Card from './shared/Card'
 
 interface IProps {
-    post: IPostPreview
+    article: IArticlePreview
 }
 
 const DatePosted = styled.p`
@@ -15,45 +15,45 @@ const DatePosted = styled.p`
     font-weight: lighter;
 `
 
-const PostPreview = (props: IProps) => {
+const ArticlePreview = (props: IProps) => {
     const history = useHistory()
 
     return (
         <Card
-            title={props.post.title}
-            onClick={() => history.push(`/post/${props.post.id}/view`)}
-            buttons={getAvailableButtons(props.post)}
-            content={getContent(props.post)}
+            title={props.article.title}
+            onClick={() => history.push(`/article/${props.article.id}/view`)}
+            buttons={getAvailableButtons(props.article)}
+            content={getContent(props.article)}
         ></Card>
     )
 }
 
-const getContent = (post: IPostPreview) => (
+const getContent = (Article: IArticlePreview) => (
     <div>
-        <p>{post.previewText}</p>
+        <p>{Article.previewText}</p>
         <DatePosted>
-            Posted {DateTimeFormatter.secondsToDate(post.createdAt)}
+            Posted {DateTimeFormatter.secondsToDate(Article.createdAt)}
         </DatePosted>
     </div>
 )
 
-const getAvailableButtons = (post: IPostPreview): IButtonProps[] => {
+const getAvailableButtons = (article: IArticlePreview): IButtonProps[] => {
     const history = useHistory()
     const buttons = [
         {
             title: 'View',
-            onClick: () => history.push(`/post/${post.id}/view`),
+            onClick: () => history.push(`/article/${article.id}/view`),
         },
     ]
 
     if (AuthenticationProvider.isAdmin()) {
         buttons.push({
             title: 'Edit',
-            onClick: () => history.push(`/post/${post.id}/edit`),
+            onClick: () => history.push(`/article/${article.id}/edit`),
         })
     }
 
     return buttons
 }
 
-export default PostPreview
+export default ArticlePreview
