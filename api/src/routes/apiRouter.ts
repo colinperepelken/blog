@@ -2,6 +2,6 @@ import { Router } from "express"
 import { articleRouter } from "./articleRouter"
 
 const apiRouter = Router()
-    .use('/article', articleRouter)
+    .use('/articles', articleRouter)
 
 export { apiRouter }

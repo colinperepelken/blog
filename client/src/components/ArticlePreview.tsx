@@ -1,4 +1,4 @@
-import { IArticlePreview } from '@blog/shared-types'
+import { IArticleDetails } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { AuthenticationProvider } from '../features/authentication/AuthenticationProvider'
@@ -7,7 +7,7 @@ import { IButtonProps } from './shared/Button'
 import Card from './shared/Card'
 
 interface IProps {
-    article: IArticlePreview
+    article: IArticleDetails
 }
 
 const DatePosted = styled.p`
@@ -28,16 +28,15 @@ const ArticlePreview = (props: IProps) => {
     )
 }
 
-const getContent = (Article: IArticlePreview) => (
+const getContent = (Article: IArticleDetails) => (
     <div>
-        <p>{Article.previewText}</p>
         <DatePosted>
             Posted {DateTimeFormatter.secondsToDate(Article.createdAt)}
         </DatePosted>
     </div>
 )
 
-const getAvailableButtons = (article: IArticlePreview): IButtonProps[] => {
+const getAvailableButtons = (article: IArticleDetails): IButtonProps[] => {
     const history = useHistory()
     const buttons = [
         {

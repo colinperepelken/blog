@@ -7,12 +7,6 @@ export interface IArticleDetails {
     createdAt: number
     updatedAt: number
 }
-export type IArticlePreview = Pick<
-IArticleDetails,
-    'id' | 'title' | 'imageUrl' | 'createdAt'
-> & {
-    previewText: string
-}
 
 export type IArticlePostRequest = Omit<IArticleDetails, 'id'>
 

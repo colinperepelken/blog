@@ -8,6 +8,11 @@ const articleRouter = Router()
         res.json(article)
     })
 
+    .get('/', (_, res) => {
+        const articles = ArticleController.list()
+        res.json(articles)
+    })
+
     .post('/', (req, res) => {
         ArticleController.create(req.body as IArticleDetails)
     })

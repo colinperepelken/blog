@@ -5,6 +5,7 @@ interface IConfig {
     copyrightText: string
     copyrightUrl: string
     theme: ITheme
+    apiUrl: string
 }
 
 // TODO this could eventually be configurable using an 'admin' UI
@@ -13,4 +14,5 @@ export const config: IConfig = {
     copyrightText: 'Colin Perepelken',
     copyrightUrl: 'https://perepelken.ca',
     theme: DefaultTheme,
+    apiUrl: 'http://localhost:3001',
 }
