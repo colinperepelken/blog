@@ -9,14 +9,21 @@ export class Resource {
     public async get(id: string) {
         return this.sendRequest(this.agent.get(`${this.basePath}/${id}`))
     }
+
+    public async list() {
+        return this.sendRequest(this.agent.get(this.basePath))
+    }
+
     public async post(body: any) {
         return this.sendRequest(this.agent.post(this.basePath, body))
     }
+
     public async patch(id: string, body: any) {
         return this.sendRequest(
             this.agent.patch(`${this.basePath}/${id}`, body),
         )
     }
+
     public async delete(id: string) {
         return this.sendRequest(this.agent.delete(`${this.basePath}/${id}`))
     }
