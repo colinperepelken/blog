@@ -1,8 +1,9 @@
 import express from 'express'
+import { DatabaseConnection } from './db/DatabaseConnection'
 import { apiRouter } from './routes/apiRouter'
 
 class App {
-  public express : express.Application
+  public express: express.Application
 
   constructor () {
     this.express = express()
