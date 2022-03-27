@@ -24,7 +24,5 @@
   "include": [
     "src"
   ],
-  "references": [
-    {"path": "../api"}
-  ],
+  "references": [],
 }

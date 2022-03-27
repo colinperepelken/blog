@@ -1,5 +1,10 @@
 {
-  "cSpell.words": ["Perepelken", "tinymce"],
+  "cSpell.words": [
+    "openapi",
+    "Perepelken",
+    "tinymce",
+    "typegen"
+  ],
   "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {

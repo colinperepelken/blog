@@ -1,4 +1,5 @@
 node_modules
+ApiClient.d.ts
 # Ignore artifacts:
 build
 coverage

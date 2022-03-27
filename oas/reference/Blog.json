@@ -24,6 +24,16 @@
       "get": {
         "summary": "Update an article",
         "operationId": "getArticle",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -41,6 +51,16 @@
       "patch": {
         "summary": "Update an article",
         "operationId": "patchArticle",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -67,6 +87,16 @@
       "delete": {
         "summary": "Delete an article",
         "operationId": "deleteArticle",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "204": {
             "description": "No Content"
@@ -121,7 +151,17 @@
             }
           }
         },
-        "x-internal": true
+        "x-internal": true,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Article"
+              }
+            }
+          },
+          "description": ""
+        }
       }
     }
   },
@@ -131,17 +171,7 @@
         "title": "Article",
         "type": "object",
         "description": "",
-        "examples": [
-          {
-            "id": 142,
-            "firstName": "Alice",
-            "lastName": "Smith",
-            "email": "alice.smith@gmail.com",
-            "dateOfBirth": "1997-10-31",
-            "emailVerified": true,
-            "signUpDate": "2019-08-24"
-          }
-        ],
+        "examples": [],
         "properties": {
           "id": {
             "type": "integer",
@@ -164,10 +194,7 @@
             "type": "number"
           }
         },
-        "required": [
-          "id",
-          "title"
-        ]
+        "required": ["id", "title"]
       }
     }
   }
