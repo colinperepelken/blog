@@ -1,16 +1,16 @@
 import ArticlePreview from './ArticlePreview'
-import { ApiClient } from '../features/apiClient/ApiClient'
 import { useEffect, useState } from 'react'
+import { ApiClientBuilder } from 'src/features/apiClient/ApiClientBuilder'
 import { IArticleDetails } from '@blog/shared-types'
 
 const ArticleList = () => {
     const [articles, setArticles] = useState<IArticleDetails[]>([])
     useEffect(() => {
-        ApiClient.build()
-            .articles.list()
-            .then((articles) => {
-                setArticles(articles)
-            })
+        ApiClientBuilder.build().then((apiClient) => {
+            apiClient
+                .listArticle()
+                .then((articles) => setArticles(articles.data.results ?? []))
+        })
     }, [])
 
     // TODO add pagination eventually

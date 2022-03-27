@@ -1,5 +1,5 @@
 import { Editor } from '@tinymce/tinymce-react'
-import { IArticleDetails } from '@api/types/ArticleTypes'
+import { IArticleDetails } from '@blog/shared-types'
 
 interface IProps {
     article: IArticleDetails
@@ -9,7 +9,7 @@ const ArticleForm = (props: IProps) => {
     return (
         <form>
             <label>
-                Post title
+                {props.article.title}
                 <input type="text" value="Post title" />
             </label>
             <Editor></Editor>

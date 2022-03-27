@@ -5,4 +5,5 @@ const path = require('path');
 module.exports = {
     config: path.join(__dirname, 'config/database.json'),
     'migrations-path': path.join(__dirname, 'dist/migrations'),
+    'seeders-path': path.join(__dirname, 'dist/seeders'),
 };

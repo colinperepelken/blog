@@ -19,8 +19,12 @@
     "start": "node ./dist/index.js",
     "dev": "ts-node ./src/index.ts",
     "build": "tsc",
-    "migration:create": "./scripts/create-migration.sh",
-    "migrate": "sequelize-cli db:migrate"
+    "db:migration:create": "./scripts/create-migration.sh",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:seeder:create": "./scripts/create-seeder.sh",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:drop": "sequelize-cli db:drop",
+    "db:create": "sequelize-cli db:create"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

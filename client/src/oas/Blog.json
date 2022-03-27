@@ -172,6 +172,7 @@
         "type": "object",
         "description": "",
         "examples": [],
+        "x-internal": true,
         "properties": {
           "id": {
             "type": "integer",
@@ -186,6 +187,9 @@
           "content": {
             "type": "string"
           },
+          "author": {
+            "type": "string"
+          },
           "updatedAt": {
             "description": "Set to true if the user's email has been verified.",
             "type": "number"
@@ -194,7 +198,15 @@
             "type": "number"
           }
         },
-        "required": ["id", "title"]
+        "required": [
+          "id",
+          "title",
+          "imageUrl",
+          "content",
+          "author",
+          "updatedAt",
+          "createdAt"
+        ]
       }
     }
   }

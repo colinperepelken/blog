@@ -20,13 +20,14 @@ declare namespace Components {
              */
             id: number;
             title: string;
-            imageUrl?: string;
-            content?: string;
+            imageUrl: string;
+            content: string;
+            author: string;
             /**
              * Set to true if the user's email has been verified.
              */
-            updatedAt?: number;
-            createdAt?: number;
+            updatedAt: number;
+            createdAt: number;
         }
     }
 }

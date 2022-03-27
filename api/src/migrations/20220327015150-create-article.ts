@@ -1,23 +1,9 @@
 import { DataTypes, QueryInterface } from "sequelize";
 import { Sequelize } from 'sequelize';
+import { Article } from '../models/Article';
 
 export const up = async (queryInterface: QueryInterface, Sequelize: Sequelize) => {
-  return queryInterface.createTable('article', {
-    id: {
-      type: DataTypes.INTEGER.UNSIGNED,
-      autoIncrement: true,
-      primaryKey: true
-    },
-    title: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    imageUrl: DataTypes.STRING,
-    content: DataTypes.STRING,
-    author: DataTypes.STRING,
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE,
-  })
+  return queryInterface.createTable(Article.tableName, Article.getAttributes())
 }
 
 export const down = async () => {
