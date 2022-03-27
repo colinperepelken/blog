@@ -21,15 +21,9 @@ Article.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    imageUrl: {
-        type: DataTypes.STRING,
-    },
-    content: {
-        type: DataTypes.STRING,
-    },
-    author: {
-        type: DataTypes.STRING,
-    },
+    imageUrl: DataTypes.STRING,
+    content: DataTypes.STRING,
+    author: DataTypes.STRING,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
 }, {
