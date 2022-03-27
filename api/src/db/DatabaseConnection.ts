@@ -1,9 +1,11 @@
-import { Sequelize } from "sequelize";
+import { Sequelize } from "sequelize"
+import dotenv from 'dotenv'
 
 export class DatabaseConnectionClass {
     public sequelize: Sequelize
 
     constructor() {
+        dotenv.config()
         this.sequelize = new Sequelize(process.env.DB_NAME || '', process.env.DB_USER || 'root', process.env.DB_PASS || '', {
             host: process.env.DB_HOST,
             dialect: 'postgres'
