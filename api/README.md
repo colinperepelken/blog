@@ -23,3 +23,11 @@ yarn start
 ```
 yarn dev
 ```
+
+### Migrations
+
+Since `sequelize-cli` does not support Typescript migrations, `yarn build` must be ran first after creating a new migration, to compile to a JS file `/dist/migrations/`. Then you can run the migration like:
+
+```
+yarn sequelize-cli db:migrate
+```
