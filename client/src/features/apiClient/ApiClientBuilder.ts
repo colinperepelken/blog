@@ -1,5 +1,5 @@
 import OpenAPIClientAxios, { Document } from 'openapi-client-axios'
-import oasFile from '../../../../oas/reference/Blog.json'
+import oasFile from '../../oas/Blog.json'
 import { Client as ApiClient } from './ApiClient'
 
 export class ApiClientBuilder {
