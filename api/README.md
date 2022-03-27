@@ -4,6 +4,12 @@ A simple backend API for the blog.
 
 ## Commands
 
+### Install dependencies
+
+```
+yarn install
+```
+
 ### Build API
 
 ```
@@ -26,8 +32,12 @@ yarn dev
 
 ### Migrations
 
-Since `sequelize-cli` does not support Typescript migrations, `yarn build` must be ran first after creating a new migration, to compile to a JS file `/dist/migrations/`. Then you can run the migration like:
+To create a new migration and run it:
 
 ```
-yarn sequelize-cli db:migrate
+yarn migration:create [migration-name]
+yarn build
+yarn migrate
 ```
+
+Since `sequelize-cli` does not support Typescript migrations, JavaScript files must be created using `yarn build` before performing the migration.
