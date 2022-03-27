@@ -13,6 +13,7 @@
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.13.0",
+    "sequelize-typescript": "^2.1.2",
     "typescript": "^4.5.3"
   },
   "scripts": {
