@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-export class DatabaseConnection {
+export class DatabaseConnectionClass {
     public sequelize: Sequelize
 
     constructor() {
@@ -23,3 +23,5 @@ export class DatabaseConnection {
         }
     }
 }
+
+export const DatabaseConnection = new DatabaseConnectionClass()

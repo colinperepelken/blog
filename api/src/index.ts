@@ -8,8 +8,7 @@ dotenv.config()
 const PORT = process.env.PORT || 3001
 const app = new App()
 
-const database = new DatabaseConnection()
-database.testConnection()
+DatabaseConnection.testConnection()
 
 app.express.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
