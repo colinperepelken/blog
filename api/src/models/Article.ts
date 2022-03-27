@@ -1,4 +1,4 @@
-import { Model, InferAttributes, InferCreationAttributes, DataTypes } from "sequelize/types";
+import { Model, InferAttributes, InferCreationAttributes, DataTypes } from "sequelize";
 import { DatabaseConnection } from '../db/DatabaseConnection';
 
 export class Article extends Model<InferAttributes<Article>, InferCreationAttributes<Article>> {
