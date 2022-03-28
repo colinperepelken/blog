@@ -20,6 +20,7 @@
     "start": "node ./dist/index.js",
     "dev": "ts-node ./src/index.ts",
     "build": "tsc",
+    "db:init": "yarn db:create && yarn db:migrate && yarn db:seed",
     "db:migration:create": "./scripts/create-migration.sh",
     "db:migrate": "sequelize-cli db:migrate",
     "db:seeder:create": "./scripts/create-seeder.sh",

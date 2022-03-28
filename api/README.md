@@ -59,3 +59,9 @@ Run the command below to drop the database. Warning! You will lose all data.
 ```
 yarn db:drop
 ```
+
+To run `db:create`, `db:migrate`, and `db:seed` all in one, you can use:
+
+```
+yarn db:init
+```
