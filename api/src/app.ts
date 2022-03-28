@@ -1,5 +1,4 @@
 import express from 'express'
-import { DatabaseConnection } from './db/DatabaseConnection'
 import { apiRouter } from './routes/apiRouter'
 
 class App {
