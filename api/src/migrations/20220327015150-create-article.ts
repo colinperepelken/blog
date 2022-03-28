@@ -3,7 +3,7 @@ import { Sequelize } from 'sequelize';
 import { Article } from '../models/Article';
 
 export const up = async (queryInterface: QueryInterface, Sequelize: Sequelize) => {
-  return queryInterface.createTable(Article.tableName, Article.getAttributes())
+  return queryInterface.createTable(Article.tableName, Article.getAttributes(), Article.options)
 }
 
 export const down = async () => {

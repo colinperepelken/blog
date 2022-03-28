@@ -1,11 +1,13 @@
 import { QueryInterface, Sequelize } from 'sequelize'
+import { Article } from '../models/Article';
 
 export const up = async (queryInterface: QueryInterface, Sequelize: Sequelize) => {
-  return queryInterface.bulkInsert('article', [{
+  return queryInterface.bulkInsert(Article.tableName, [{
     title: 'Example article',
     author: 'William Murdoch',
     content: 'Article content here...',
-    imageUrl: '#'
+    imageUrl: '#',
+    createdAt: new Date()
   }])
 }
 
