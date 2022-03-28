@@ -70,15 +70,12 @@ declare namespace Paths {
     }
     namespace ListArticle {
         namespace Responses {
-            export interface $200 {
-                total?: number;
-                results?: /**
-                 * Article
-                 *
-                 * example:
-                 */
-                Components.Schemas.Article[];
-            }
+            export type $200 = /**
+             * Article
+             *
+             * example:
+             */
+            Components.Schemas.Article[];
         }
     }
     namespace PatchArticle {

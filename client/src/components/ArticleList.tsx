@@ -9,16 +9,17 @@ const ArticleList = () => {
         ApiClientBuilder.build().then((apiClient) => {
             apiClient
                 .listArticle()
-                .then((articles) => setArticles(articles.data.results ?? []))
+                .then((articles) => setArticles(articles.data))
         })
     }, [])
 
     // TODO add pagination eventually
     return (
         <div>
-            {articles.map((article) => (
-                <ArticlePreview key={article.id} article={article} />
-            ))}
+            {articles.length > 0 &&
+                articles.map((article) => (
+                    <ArticlePreview key={article.id} article={article} />
+                ))}
         </div>
     )
 }
