@@ -1,6 +1,5 @@
 import { IArticleDetails } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
-import { Components } from 'src/features/apiClient/ApiClient'
 import styled from 'styled-components'
 import { AuthenticationProvider } from '../features/authentication/AuthenticationProvider'
 import { DateTimeFormatter } from '../features/DateTimeFormatter'
@@ -29,7 +28,7 @@ const ArticlePreview = (props: IProps) => {
     )
 }
 
-const getContent = (Article: Components.Schemas.Article) => (
+const getContent = (Article: IArticleDetails) => (
     <div>
         <DatePosted>
             Posted {DateTimeFormatter.secondsToDate(Article.createdAt)}

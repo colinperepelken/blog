@@ -6,11 +6,9 @@ import { IArticleDetails } from '@blog/shared-types'
 const ArticleList = () => {
     const [articles, setArticles] = useState<IArticleDetails[]>([])
     useEffect(() => {
-        ApiClientBuilder.build().then((apiClient) => {
-            apiClient
-                .listArticle()
-                .then((articles) => setArticles(articles.data))
-        })
+        ApiClientBuilder.build()
+            .listArticles()
+            .then((articles) => setArticles(articles.data))
     }, [])
 
     // TODO add pagination eventually
