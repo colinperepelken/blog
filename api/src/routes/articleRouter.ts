@@ -3,18 +3,19 @@ import { ArticleController } from "../controllers/ArticleController"
 import { IArticleDetails } from '@blog/shared-types'
 
 const articleRouter = Router()
-    .get('/:id', (req, res) => {
-        const article = ArticleController.get(req.params.id)
-        res.json(article)
+    .get('/:id', async (request, response) => {
+        const article = await ArticleController.get(request.params.id)
+        response.json(article)
     })
 
-    .get('/', (_, res) => {
-        const articles = ArticleController.list()
-        res.json(articles)
+    .get('/', async (request, response) => {
+        const articles = await ArticleController.list()
+        response.json(articles)
     })
 
-    .post('/', (req, res) => {
-        ArticleController.create(req.body as IArticleDetails)
+    .post('/', (request, response) => {
+        ArticleController.create(request.body as IArticleDetails)
+        response.sendStatus(201)
     })
 
 export { articleRouter }

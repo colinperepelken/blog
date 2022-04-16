@@ -6,13 +6,8 @@ export class ArticleController {
         return Article.findByPk(id)
     }
 
-    public static list() {
-        const exampleArticle = {
-            id: 'test123',
-            title: 'Test title',
-            description: 'This is my first blog post'
-        }
-        return [exampleArticle]  
+    public static async list() {
+        return Article.findAll()
     }
 
     public static update(id: string) {

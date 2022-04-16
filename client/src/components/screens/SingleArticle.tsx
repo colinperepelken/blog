@@ -1,12 +1,21 @@
-import { Link } from 'react-router-dom'
+import { IArticleDetails } from '@blog/shared-types'
+import { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { ApiClientBuilder } from 'src/features/apiClient/ApiClientBuilder'
 import Button from '../shared/Button'
 
-interface IProps {
-    articleId: string
-}
+const SingleArticle = () => {
+    const { id } = useParams<{ id: string }>()
+    const [article, setArticle] = useState<IArticleDetails>()
+    useEffect(() => {
+        ApiClientBuilder.build()
+            .getArticle(id)
+            .then((article) => setArticle(article))
+    }, undefined)
 
-const SingleArticle = (props: IProps) => {
-    // TODO make call to API with articleId and get post title and content
+    if (!article) {
+        return <p>Loading...</p>
+    }
 
     return (
         <div>
@@ -15,9 +24,9 @@ const SingleArticle = (props: IProps) => {
             </Link>
             <div>
                 <article>
-                    <h2>Post title</h2>
+                    <h2>{article.title}</h2>
                     <section>
-                        <p>Blog post content here</p>
+                        <p>{article.content}</p>
                     </section>
                 </article>
             </div>

@@ -8,7 +8,7 @@ const ArticleList = () => {
     useEffect(() => {
         ApiClientBuilder.build()
             .listArticles()
-            .then((articles) => setArticles(articles.data))
+            .then((articles) => setArticles(articles))
     }, [])
 
     // TODO add pagination eventually
