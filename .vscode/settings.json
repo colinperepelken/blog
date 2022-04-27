@@ -2,6 +2,7 @@
   "cSpell.words": [
     "openapi",
     "Perepelken",
+    "tailwindcss",
     "tinymce",
     "typegen"
   ],
@@ -10,5 +11,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "tailwindCSS.includeLanguages": { "plaintext": "javascript" }
+  "tailwindCSS.includeLanguages": { "plaintext": "javascript" },
+  "files.associations": { "*.css": "postcss" }
 }

@@ -12,7 +12,7 @@ const Title = styled.h1`
 
 const Header = () => (
     <HeaderWrapper>
-        <Title>{config.title}</Title>
+        <Title className="underline">{config.title}</Title>
     </HeaderWrapper>
 )
 
