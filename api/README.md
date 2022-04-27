@@ -15,13 +15,13 @@ nvm use
 ### Install dependencies
 
 ```
-yarn install
+npm install
 ```
 
 ### Build API
 
 ```
-yarn build
+npm build
 ```
 
 ### Start API (from build)
@@ -29,13 +29,13 @@ yarn build
 Listens on port 3001.
 
 ```
-yarn start
+npm start
 ```
 
 ### Start the API (development)
 
 ```
-yarn dev
+npm run dev
 ```
 
 ### Database commands
@@ -43,33 +43,33 @@ yarn dev
 To create the database, run:
 
 ```
-yarn db:create
+npm db:create
 ```
 
 To create a new migration and run it:
 
 ```
-yarn db:migration:create [migration-name]
-yarn build
-yarn migrate
+npm db:migration:create [migration-name]
+npm build
+npm migrate
 ```
 
-Since `sequelize-cli` does not support Typescript migrations, JavaScript files must be created using `yarn build` before performing the migration.
+Since `sequelize-cli` does not support Typescript migrations, JavaScript files must be created using `npm build` before performing the migration.
 
 To seed the database, run:
 
 ```
-yarn db:seed
+npm db:seed
 ```
 
 Run the command below to drop the database. Warning! You will lose all data.
 
 ```
-yarn db:drop
+npm db:drop
 ```
 
 To run `db:create`, `db:migrate`, and `db:seed` all in one, you can use:
 
 ```
-yarn db:init
+npm db:init
 ```
