@@ -4,6 +4,14 @@ A simple backend API for the blog.
 
 ## Commands
 
+### `nvm use`
+
+Before running any of the below commands, ensure you are using the correct node version by running
+
+```
+nvm use
+```
+
 ### Install dependencies
 
 ```
