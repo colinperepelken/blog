@@ -1,19 +1,13 @@
 import { IArticleDetails } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
-import styled from 'styled-components'
 import { AuthenticationProvider } from '../features/authentication/AuthenticationProvider'
 import { DateTimeFormatter } from '../features/DateTimeFormatter'
 import { IButtonProps } from './shared/Button'
-import Card from './shared/Card'
+import { Card } from './shared/Card'
 
 interface IProps {
     article: IArticleDetails
 }
-
-const DatePosted = styled.p`
-    font-style: italic;
-    font-weight: lighter;
-`
 
 const ArticlePreview = (props: IProps) => {
     const history = useHistory()
@@ -30,9 +24,7 @@ const ArticlePreview = (props: IProps) => {
 
 const getContent = (Article: IArticleDetails) => (
     <div>
-        <DatePosted>
-            Posted {DateTimeFormatter.secondsToDate(Article.createdAt)}
-        </DatePosted>
+        <p>Posted {DateTimeFormatter.secondsToDate(Article.createdAt)}</p>
     </div>
 )
 

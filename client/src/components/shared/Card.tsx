@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-import { Theme } from '../../features/theme/Theme'
 import Button, { IButtonProps } from './Button'
 
 interface IProps {
@@ -9,34 +7,16 @@ interface IProps {
     onClick?: () => void
 }
 
-const StyledCard = styled.div`
-    border: 1px solid ${Theme.border};
-    box-shadow: 5px 10px 5px ${Theme.boxShadow};
-    border-radius: 5px;
-    padding: 1rem 3rem;
-`
-
-const CardButton = styled(Button)`
-    margin-right: 0.5rem;
-`
-
-const CardTitle = styled.h2`
-    color: ${Theme.primary};
-    cursor: pointer;
-`
-
-const Card = (props: IProps) => (
-    <StyledCard>
-        <CardTitle onClick={props.onClick}>{props.title}</CardTitle>
+export const Card = (props: IProps) => (
+    <div>
+        <h2 onClick={props.onClick}>{props.title}</h2>
         <div>{props.content}</div>
         {renderButtons(props.buttons)}
-    </StyledCard>
+    </div>
 )
 
 const renderButtons = (buttons?: IButtonProps[]) => {
     return buttons?.map((buttonProps, index) => (
-        <CardButton key={index} {...buttonProps}></CardButton>
+        <Button key={index} {...buttonProps}></Button>
     ))
 }
-
-export default Card
