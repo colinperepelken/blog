@@ -12,7 +12,8 @@ const ArticleForm = (props: IProps) => {
                 {props.article.title}
                 <input type="text" value="Post title" />
             </label>
-            <Editor></Editor>
+            {/* TODO, there is an issue with Editor when using yarn. If npm install is used it works fine */}
+            {/* <Editor></Editor> */}
         </form>
     )
 }
