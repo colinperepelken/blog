@@ -8,8 +8,13 @@ interface IProps {
 }
 
 export const Card = (props: IProps) => (
-    <div>
-        <h2 onClick={props.onClick}>{props.title}</h2>
+    <div className="block p-6 shadow rounded bg-white">
+        <h2
+            className="mb-2 font-medium hover:cursor-pointer"
+            onClick={props.onClick}
+        >
+            {props.title}
+        </h2>
         <div>{props.content}</div>
         {renderButtons(props.buttons)}
     </div>

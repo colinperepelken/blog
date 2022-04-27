@@ -1,8 +1,8 @@
 import { config } from '../config'
 
 const Header = () => (
-    <div>
-        <h1 className="underline">{config.title}</h1>
+    <div className="p-3">
+        <h1 className="text-3xl text-center">{config.title}</h1>
     </div>
 )
 

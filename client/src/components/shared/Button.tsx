@@ -2,11 +2,13 @@ export interface IButtonProps {
     title: string
     onClick?: () => void
     primary?: boolean
-    className?: string
 }
 
 const Button = (props: IButtonProps) => (
-    <button onClick={props.onClick} className={props.className}>
+    <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1"
+        onClick={props.onClick}
+    >
         {props.title}
     </button>
 )

@@ -13,7 +13,7 @@ const ArticleList = () => {
 
     // TODO add pagination eventually
     return (
-        <div>
+        <div className="container mx-auto">
             {articles.length > 0 &&
                 articles.map((article) => (
                     <ArticlePreview key={article.id} article={article} />

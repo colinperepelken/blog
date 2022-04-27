@@ -8,7 +8,7 @@ import EditPost from './components/screens/EditArticle'
 
 const App = () => {
     return (
-        <div className="App">
+        <div className="App bg-slate-100">
             <Header />
             <div>
                 <Router>
