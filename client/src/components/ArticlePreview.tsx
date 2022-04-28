@@ -22,9 +22,11 @@ const ArticlePreview = (props: IProps) => {
     )
 }
 
-const getContent = (Article: IArticleDetails) => (
+const getContent = (article: IArticleDetails) => (
     <div>
-        <p>Posted {DateTimeFormatter.secondsToDate(Article.createdAt)}</p>
+        <p>
+            Posted on {article.createdAt} by {article.author}
+        </p>
     </div>
 )
 
