@@ -1,3 +1,5 @@
+import { ITag } from "./TagTypes"
+
 export interface IArticleDetails {
     id: number
     title: string
@@ -11,3 +13,7 @@ export interface IArticleDetails {
 export type IArticlePostRequest = Omit<IArticleDetails, 'id'>
 
 export type IArticlePatchRequest = Partial<IArticleDetails>
+
+export interface IArticleResponse extends IArticleDetails {
+    tags: ITag[]
+}

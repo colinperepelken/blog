@@ -18,6 +18,11 @@ class App {
     })
     
     this.express.use('/', apiRouter)
+    this.express.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+      console.error(err)
+      res.status(err.status || 500);
+      res.send(err);
+    })
   }
 }
 

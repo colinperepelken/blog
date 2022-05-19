@@ -14,7 +14,7 @@ These types can be referenced from other modules (e.g. `api` and `client`) by ru
 
 ```
 cd <new-dir>
-yarn add ../shared-types
+npm install ../shared-types
 ```
 
 ## Updating types

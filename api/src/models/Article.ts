@@ -1,4 +1,4 @@
-import { IArticleDetails } from "@blog/shared-types";
+import { IArticleDetails, ITag } from "@blog/shared-types";
 import { Model, InferAttributes, InferCreationAttributes, DataTypes } from "sequelize";
 import { DatabaseConnection } from '../db/DatabaseConnection';
 
@@ -31,3 +31,4 @@ Article.init({
     sequelize: DatabaseConnection.sequelize,
     timestamps: true
 })
+

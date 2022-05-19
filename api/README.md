@@ -21,7 +21,7 @@ npm install
 ### Build API
 
 ```
-npm build
+npm run build
 ```
 
 ### Start API (from build)
@@ -43,33 +43,39 @@ npm run dev
 To create the database, run:
 
 ```
-npm db:create
+npm run db:create
 ```
 
 To create a new migration and run it:
 
 ```
-npm db:migration:create [migration-name]
-npm build
-npm migrate
+npm run db:migration:create [migration-name]
+npm run build
+npm run db:migrate
 ```
 
 Since `sequelize-cli` does not support Typescript migrations, JavaScript files must be created using `npm build` before performing the migration.
 
+To create a new seeder, use:
+
+```
+npm run db:seeder:create [seeder-name]
+```
+
 To seed the database, run:
 
 ```
-npm db:seed
+npm run db:seed
 ```
 
 Run the command below to drop the database. Warning! You will lose all data.
 
 ```
-npm db:drop
+npm run db:drop
 ```
 
 To run `db:create`, `db:migrate`, and `db:seed` all in one, you can use:
 
 ```
-npm db:init
+npm run db:init
 ```

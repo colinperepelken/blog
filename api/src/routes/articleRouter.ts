@@ -4,13 +4,18 @@ import { IArticleDetails } from '@blog/shared-types'
 
 const articleRouter = Router()
     .get('/:id', async (request, response) => {
-        const article = await ArticleController.get(request.params.id)
+        const article = await ArticleController.get(parseInt(request.params.id))
         response.json(article)
     })
 
-    .get('/', async (request, response) => {
-        const articles = await ArticleController.list()
-        response.json(articles)
+    .get('/', async (request, response, next) => {
+        try {
+            const articles = await ArticleController.list()
+            response.json(articles)
+        } catch (error) {
+            next(error)
+        }
+
     })
 
     .post('/', (request, response) => {
