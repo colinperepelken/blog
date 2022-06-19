@@ -10,7 +10,7 @@ interface IConfig {
 
 // TODO this could eventually be configurable using an 'admin' UI
 export const config: IConfig = {
-    title: "Colin's World",
+    title: 'a blog by Colin',
     copyrightText: 'Colin Perepelken',
     copyrightUrl: 'https://perepelken.ca',
     theme: DefaultTheme,
