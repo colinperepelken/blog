@@ -12,13 +12,18 @@ interface IProps {
 const ArticlePreview = (props: IProps) => {
     const history = useHistory()
 
+    const [x, y] = getNewPosition()
     return (
-        <Card
-            title={props.article.title}
-            onClick={() => history.push(`/article/${props.article.id}/view`)}
-            buttons={getAvailableButtons(props.article)}
-            content={getContent(props.article)}
-        ></Card>
+        <div
+            className="absolute bg-slate-800 w-16 h-16 rounded-full opacity-80 hover:opacity-90 shadow-lg hover:shadow-2xl cursor-pointer"
+            style={{ left: x, top: y }}
+        ></div>
+        // <Card
+        //     title={props.article.title}
+        //     onClick={() => history.push(`/article/${props.article.id}/view`)}
+        //     buttons={getAvailableButtons(props.article)}
+        //     content={getContent(props.article)}
+        // ></Card>
     )
 }
 
@@ -47,6 +52,13 @@ const getAvailableButtons = (article: IArticleDetails): IButtonProps[] => {
     }
 
     return buttons
+}
+
+const getNewPosition = () => {
+    return [
+        Math.floor(Math.random() * (window.innerWidth - 16)),
+        Math.floor(Math.random() * (window.innerHeight - 16)),
+    ]
 }
 
 export default ArticlePreview
