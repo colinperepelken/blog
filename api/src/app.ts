@@ -1,4 +1,5 @@
 import express from 'express'
+import { Logger } from './logging/Logger'
 import { apiRouter } from './routes/apiRouter'
 
 class App {
@@ -17,6 +18,10 @@ class App {
       next()
     })
     
+    this.express.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+      Logger.logIncomingRequest(`${req.method} ${req.path}`)
+      next()
+    })
     this.express.use('/', apiRouter)
     this.express.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
       console.error(err)
