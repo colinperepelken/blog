@@ -6,10 +6,14 @@ export class TimestampConverter {
      * 
      * This function converts the Sequelize timestamps from Dates to seconds since unix epoch
      */
-    public static convertTimestampsToSecondsSinceEpoch(data: {createdAt: Date, updatedAt: Date | null}): {createdAt: number, updatedAt: number | null} {
+    public static convertTimestamps(data: {createdAt: Date, updatedAt: Date | null}): {createdAt: number, updatedAt: number | null} {
         return {
-            createdAt: data.createdAt.getTime() / 1000,
-            updatedAt: data.updatedAt ? data.updatedAt.getTime() / 1000 : null
+            createdAt: this.convertDateToSecondsSinceEpoch(data.createdAt),
+            updatedAt: data.updatedAt ? this.convertDateToSecondsSinceEpoch(data.updatedAt) : null
         }
+    }
+
+    private static convertDateToSecondsSinceEpoch(date: Date ): number {
+        return Math.floor(date.getTime() / 1000)
     }
 }

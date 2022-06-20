@@ -40,7 +40,7 @@ export class ArticleController extends AbstractController<Article> {
     private static formatResponse(article: Article): IArticleResponse {
         return {
             ...article.get({plain: true}),
-            ...TimestampConverter.convertTimestampsToSecondsSinceEpoch(article), // Convert article timestamps from Dates to seconds since unix epoch
+            ...TimestampConverter.convertTimestamps(article), // Convert article timestamps from Dates to seconds since unix epoch
             tags: article.tags ?? [] // Ensure that article.tags is always set
         }
     }
