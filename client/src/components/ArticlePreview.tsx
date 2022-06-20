@@ -5,6 +5,7 @@ import { DateTimeFormatter } from '../features/DateTimeFormatter'
 import { IButtonProps } from './shared/Button'
 import { Card } from './shared/Card'
 import { useState, useEffect } from 'react'
+import moment from 'moment'
 
 interface IProps {
     article: IArticleDetails
@@ -30,8 +31,11 @@ const ArticlePreview = (props: IProps) => {
                         {props.article.title}
                     </h2>
                     <p>
-                        Posted on {props.article.createdAt} by{' '}
-                        {props.article.author}
+                        Posted on{' '}
+                        {moment
+                            .unix(props.article.createdAt)
+                            .format('MMMM Do, YYYY')}{' '}
+                        by {props.article.author}
                     </p>
                 </div>
             )}
