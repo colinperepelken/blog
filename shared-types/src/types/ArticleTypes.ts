@@ -7,7 +7,7 @@ export interface IArticleDetails {
     content: string
     author: string
     createdAt: number
-    updatedAt: number
+    updatedAt: number | null
 }
 
 export type IArticlePostRequest = Omit<IArticleDetails, 'id'>

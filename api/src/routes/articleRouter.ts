@@ -1,6 +1,7 @@
 import { Router } from "express"
 import { ArticleController } from "../controllers/ArticleController"
 import { IArticleDetails } from '@blog/shared-types'
+import { IArticle } from "../models/Article"
 
 const articleRouter = Router()
     .get('/:id', async (request, response) => {
@@ -19,7 +20,7 @@ const articleRouter = Router()
     })
 
     .post('/', (request, response) => {
-        ArticleController.create(request.body as IArticleDetails)
+        ArticleController.create(request.body as IArticle)
         response.sendStatus(201)
     })
 

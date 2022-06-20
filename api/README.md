@@ -77,5 +77,6 @@ npm run db:drop
 To run `db:create`, `db:migrate`, and `db:seed` all in one, you can use:
 
 ```
+npm run build
 npm run db:init
 ```

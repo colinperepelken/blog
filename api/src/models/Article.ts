@@ -1,15 +1,26 @@
 import { IArticleDetails, ITag } from "@blog/shared-types";
-import { Model, InferAttributes, InferCreationAttributes, DataTypes } from "sequelize";
+import { Model, InferAttributes, InferCreationAttributes, DataTypes, Optional, CreationOptional, NonAttribute } from "sequelize";
 import { DatabaseConnection } from '../db/DatabaseConnection';
+import { Tag } from "./Tag";
 
-export class Article extends Model<InferAttributes<Article>, InferCreationAttributes<Article>> implements IArticleDetails {
-    declare id: number
+/*
+* Everywhere else we use IArticleDetails which defines the timestamps as being numbers, but the Sequelize
+*/ 
+export interface IArticle extends Omit<IArticleDetails, 'createdAt' | 'updatedAt' | 'id'> {
+    createdAt: Date
+    updatedAt: Date | null
+}
+
+export class Article extends Model<InferAttributes<Article>, InferCreationAttributes<Article>> implements IArticle {
+    declare id: CreationOptional<number>
     declare title: string
     declare imageUrl: string
     declare content: string
     declare author: string
-    declare createdAt: number
-    declare updatedAt: number
+    declare createdAt: Date
+    declare updatedAt: Date | null
+
+    declare tags?: NonAttribute<Tag[]>;
 }
 
 Article.init({
