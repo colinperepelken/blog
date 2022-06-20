@@ -28,11 +28,19 @@ export enum LogColorOption {
 
 
 export class Logger {
-    public static log(message: string, color: LogColorOption = LogColorOption.Reset) {
+    private static log(message: string, color: LogColorOption = LogColorOption.Reset) {
         console.log(color, message, LogColorOption.Reset)
     }
 
-    public static logIncomingRequest(message: string) {
-        this.log(`[Incoming request]: ${message}`, LogColorOption.FgCyan, )
+    public static info(message: string) {
+        this.log(message, LogColorOption.FgCyan)
+    }
+
+    public static success(message: string) {
+        this.log(message, LogColorOption.FgGreen)
+    }
+
+    public static error(message: string) {
+        console.error(LogColorOption.FgRed, message, LogColorOption.Reset)
     }
 }

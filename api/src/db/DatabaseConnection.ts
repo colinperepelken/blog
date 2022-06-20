@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize"
 import dotenv from 'dotenv'
+import { Logger } from "../logging/Logger"
 
 export class DatabaseConnectionClass {
     public sequelize: Sequelize
@@ -15,11 +16,11 @@ export class DatabaseConnectionClass {
     public async testConnection() {
         try {
             await this.sequelize.authenticate()
-            console.log('Database connection successful!')
+            Logger.success('Database connection successful!')
         } catch (error) {
-            console.log('Unable to connect to the database:')
+            Logger.error('Unable to connect to the database:')
             if (error instanceof Error) {
-                console.log(error.message)
+                Logger.error(error.message)
             }
             process.exit(1)
         }

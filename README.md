@@ -8,5 +8,6 @@ A simple blog built with React, Typescript, Node.js and Postgres. Currently a wo
 - ~~Rebuild an api client from scratch in `client`~~
 - ~~Upgrade to react-scripts v5~~
 - ~~Set up Tailwind~~
+- eslint auto-remove unused imports
 - Continue building out the client...
 - Continue building out the api and database...
