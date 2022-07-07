@@ -15,11 +15,12 @@ const ArticlePreview = (props: IProps) => {
     const history = useHistory()
     const [showHoverBox, setShowHoverBox] = useState(false)
     const [[x, y], setPositions] = useState(getRandomPosition())
+    const positionUpdateFrequency = getRandomPositionUpdateFrequency()
 
     useEffect(() => {
         const timeout = setTimeout(() => {
             setPositions(getRandomPosition())
-        }, 5000)
+        }, positionUpdateFrequency)
 
         return () => clearTimeout(timeout)
     }, [x, y])
@@ -58,9 +59,9 @@ const ArticlePreview = (props: IProps) => {
         <div
             className="absolute bg-green-900 w-16 h-16 rounded-full opacity-80 hover:opacity-90 shadow-lg hover:shadow-2xl cursor-pointer border-2 border-slate-700 hover:border-slate-900 hover:border-2 z-40"
             style={{
-                transitionDuration: '5000ms',
+                transitionDuration: `${positionUpdateFrequency}ms`,
                 transform: `translate3d(${x}px, ${y}px, 0)`,
-                transitionTimingFunction: 'ease',
+                transitionTimingFunction: 'linear',
             }}
             onClick={() => setShowHoverBox(true)}
         ></div>
@@ -106,6 +107,10 @@ const getRandomPosition = (): [number, number] => {
         Math.floor(Math.random() * (window.innerWidth - ORB_SIZE)),
         Math.floor(Math.random() * (window.innerHeight - ORB_SIZE)),
     ]
+}
+
+const getRandomPositionUpdateFrequency = (): number => {
+    return Math.floor(Math.random() * 10000 + 2000)
 }
 
 export default ArticlePreview
