@@ -1,9 +1,7 @@
 import { IArticleDetails } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
 import { AuthenticationProvider } from '../features/authentication/AuthenticationProvider'
-import { DateTimeFormatter } from '../features/DateTimeFormatter'
-import Button, { IButtonProps } from './shared/Button'
-import { Card } from './shared/Card'
+import { IButtonProps } from './shared/Button'
 import { useState, useEffect } from 'react'
 import moment from 'moment'
 
@@ -11,15 +9,28 @@ interface IProps {
     article: IArticleDetails
 }
 
+const ORB_SIZE = 48
+
 const ArticlePreview = (props: IProps) => {
     const history = useHistory()
     const [showHoverBox, setShowHoverBox] = useState(false)
-    const [[x, y], setPosition] = useState(getNewPosition())
+    const [[x, y], setPositions] = useState(getRandomPosition())
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setPositions(getRandomPosition())
+        }, 5000)
+
+        return () => clearTimeout(timeout)
+    }, [x, y])
+
     if (showHoverBox) {
         return (
             <div
                 className="bg-green-900 absolute w-48 h-48 p-1 rounded-full text-slate-800 text-center flex items-center z-10"
-                style={{ left: x, top: y }}
+                style={{
+                    transition: 'none',
+                }}
             >
                 <div>
                     <h2 className="text-lg font-semibold">
@@ -42,10 +53,15 @@ const ArticlePreview = (props: IProps) => {
             </div>
         )
     }
+
     return (
         <div
             className="absolute bg-green-900 w-16 h-16 rounded-full opacity-80 hover:opacity-90 shadow-lg hover:shadow-2xl cursor-pointer border-2 border-slate-700 hover:border-slate-900 hover:border-2 z-40"
-            style={{ left: x, top: y }}
+            style={{
+                transitionDuration: '5000ms',
+                transform: `translate3d(${x}px, ${y}px, 0)`,
+                transitionTimingFunction: 'ease',
+            }}
             onClick={() => setShowHoverBox(true)}
         ></div>
     )
@@ -85,10 +101,10 @@ const getAvailableButtons = (article: IArticleDetails): IButtonProps[] => {
     return buttons
 }
 
-const getNewPosition = (): [number, number] => {
+const getRandomPosition = (): [number, number] => {
     return [
-        Math.floor(Math.random() * (window.innerWidth - 16)),
-        Math.floor(Math.random() * (window.innerHeight - 16)),
+        Math.floor(Math.random() * (window.innerWidth - ORB_SIZE)),
+        Math.floor(Math.random() * (window.innerHeight - ORB_SIZE)),
     ]
 }
 
