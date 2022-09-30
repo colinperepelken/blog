@@ -2,8 +2,6 @@ import { IArticleDetails } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
 import { AuthenticationProvider } from '../features/authentication/AuthenticationProvider'
 import { IButtonProps } from './shared/Button'
-import { useState, useEffect } from 'react'
-import moment from 'moment'
 import { Card } from './shared/Card'
 
 interface IProps {
