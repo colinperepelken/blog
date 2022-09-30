@@ -1,7 +1,6 @@
 import { ParallaxBanner } from 'react-scroll-parallax'
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types'
 import { config } from 'src/config'
-import { Avatar } from './Avatar'
 
 export const Banner = () => {
     const background: BannerLayer = {
@@ -19,12 +18,11 @@ export const Banner = () => {
         expanded: false,
         children: (
             <div className="absolute inset-0 flex items-center justify-center flex-col">
-                <Avatar />
-                <h1 className="text-6xl md:text-8xl text-white font-thin">
+                <h1 className="text-6xl text-white font-extralight">
                     {config.title}
                 </h1>
-                <h2 className="text-3xl mt-2 text-white font-thin">
-                    Senior Software Engineer
+                <h2 className="text-2xl mt-2 text-white font-thin">
+                    a blog by Colin
                 </h2>
             </div>
         ),
