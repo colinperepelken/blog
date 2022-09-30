@@ -4,7 +4,7 @@ import { config } from 'src/config'
 
 export const Banner = () => {
     const background: BannerLayer = {
-        image: 'assets/banner-background.jpeg',
+        image: 'assets/banner-background.jpg',
         translateY: [0, 50],
         opacity: [1, 0.3],
         scale: [1.05, 1, 'easeOutCubic'],
@@ -39,9 +39,7 @@ export const Banner = () => {
         opacity: [0, 1],
         shouldAlwaysCompleteAnimation: true,
         expanded: false,
-        children: (
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-blue-900" />
-        ),
+        children: <div className="absolute inset-0 bg-black" />,
     }
 
     return (
