@@ -1,33 +1,36 @@
 import React from 'react'
-import Home from './components/screens/Home'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import SingleArticle from './components/screens/SingleArticle'
-import Header from './components/Header'
 import Footer from './components/Footer'
+import { Banner } from './components/Banner'
+import { ParallaxProvider } from 'react-scroll-parallax'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import EditPost from './components/screens/EditArticle'
+import Home from './components/screens/Home'
+import SingleArticle from './components/screens/SingleArticle'
 
 const App = () => {
     return (
         <div className="App bg-slate-800 text-sky-400">
-            <Header />
-            <div>
-                <Router>
-                    <Switch>
-                        <Route
-                            exact
-                            path="/article/:id/view"
-                            component={SingleArticle}
-                        />
-                        <Route
-                            exact
-                            path="/article/:id/edit"
-                            component={EditPost}
-                        />
-                        <Route exact path="/" component={Home} />
-                    </Switch>
-                </Router>
-            </div>
-            <Footer />
+            <ParallaxProvider>
+                <Banner />
+                <div className="center h-full bg-black pt-9">
+                    <Router>
+                        <Switch>
+                            <Route
+                                exact
+                                path="/article/:id/view"
+                                component={SingleArticle}
+                            />
+                            <Route
+                                exact
+                                path="/article/:id/edit"
+                                component={EditPost}
+                            />
+                            <Route exact path="/" component={Home} />
+                        </Switch>
+                    </Router>
+                </div>
+                <Footer />
+            </ParallaxProvider>
         </div>
     )
 }

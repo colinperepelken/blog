@@ -12,7 +12,7 @@ const ArticlePreview = (props: IProps) => {
     const history = useHistory()
 
     return (
-        <div className="my-2">
+        <div className="mb-2">
             <Card
                 title={props.article.title}
                 onClick={() =>
