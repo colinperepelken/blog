@@ -1,7 +1,7 @@
-import { Router } from "express"
-import { ArticleController } from "../controllers/ArticleController"
+import { Router } from 'express'
+import { ArticleController } from '../controllers/ArticleController'
 import { IArticleDetails } from '@blog/shared-types'
-import { IArticle } from "../models/Article"
+import { IArticle } from '../models/Article'
 
 const articleRouter = Router()
     .get('/:id', async (request, response) => {
@@ -16,7 +16,6 @@ const articleRouter = Router()
         } catch (error) {
             next(error)
         }
-
     })
 
     .post('/', (request, response) => {
