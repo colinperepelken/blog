@@ -2,7 +2,7 @@ import { IArticleDetails } from '@blog/shared-types'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ApiClientBuilder } from 'src/features/apiClient/ApiClientBuilder'
-import Button from '../shared/Button'
+import Button from '../common/Button'
 
 const SingleArticle = () => {
     const { id } = useParams<{ id: string }>()

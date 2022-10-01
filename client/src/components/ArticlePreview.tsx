@@ -1,8 +1,7 @@
 import { IArticleDetails } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
-import { AuthenticationProvider } from '../features/authentication/AuthenticationProvider'
-import { IButtonProps } from './shared/Button'
-import { Card } from './shared/Card'
+import { DateTimeFormatter } from 'src/features/DateTimeFormatter'
+import { Card } from './common/Card'
 
 interface IProps {
     article: IArticleDetails
@@ -18,7 +17,6 @@ const ArticlePreview = (props: IProps) => {
                 onClick={() =>
                     history.push(`/article/${props.article.id}/view`)
                 }
-                buttons={getAvailableButtons(props.article)}
                 content={getContent(props.article)}
             ></Card>
         </div>
@@ -28,28 +26,10 @@ const ArticlePreview = (props: IProps) => {
 const getContent = (article: IArticleDetails) => (
     <div>
         <p>
-            Posted on {article.createdAt} by {article.author}
+            Posted on {DateTimeFormatter.secondsToDate(article.createdAt)} by{' '}
+            {article.author}
         </p>
     </div>
 )
-
-const getAvailableButtons = (article: IArticleDetails): IButtonProps[] => {
-    const history = useHistory()
-    const buttons = [
-        {
-            title: 'View',
-            onClick: () => history.push(`/article/${article.id}/view`),
-        },
-    ]
-
-    if (AuthenticationProvider.isAdmin()) {
-        buttons.push({
-            title: 'Edit',
-            onClick: () => history.push(`/article/${article.id}/edit`),
-        })
-    }
-
-    return buttons
-}
 
 export default ArticlePreview
