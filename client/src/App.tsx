@@ -9,7 +9,7 @@ import SingleArticle from './components/screens/SingleArticle'
 
 const App = () => {
     return (
-        <div className="App bg-slate-800 text-sky-400">
+        <div className="App bg-slate-800 text-white">
             <ParallaxProvider>
                 <Banner />
                 <div className="center h-full bg-black pt-9">

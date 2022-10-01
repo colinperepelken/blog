@@ -28,10 +28,17 @@ export const Banner = () => {
         ),
     }
 
-    const foreground: BannerLayer = {
-        image: 'assets/banner-foreground.png',
+    const foregroundMountain: BannerLayer = {
+        image: 'assets/mountain.png',
         translateY: [0, 15],
         scale: [1, 1.1, 'easeOutCubic'],
+        shouldAlwaysCompleteAnimation: true,
+    }
+
+    const foregroundTrees: BannerLayer = {
+        image: 'assets/trees.png',
+        translateY: [15, -20],
+        scale: [1, 1.2, 'easeOutCubic'],
         shouldAlwaysCompleteAnimation: true,
     }
 
@@ -44,7 +51,13 @@ export const Banner = () => {
 
     return (
         <ParallaxBanner
-            layers={[background, headline, foreground, gradientOverlay]}
+            layers={[
+                background,
+                headline,
+                foregroundMountain,
+                foregroundTrees,
+                gradientOverlay,
+            ]}
             className="h-full"
         />
     )

@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export const Card = (props: IProps) => (
-    <div className="block p-6 shadow rounded bg-slate-600">
+    <div className="block p-6 rounded bg-black border border-violet-400 font-light text-gray-300">
         <h2
             className="mb-2 font-medium hover:cursor-pointer"
             onClick={props.onClick}

@@ -6,7 +6,7 @@ export interface IButtonProps {
 
 const Button = (props: IButtonProps) => (
     <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1"
+        className="bg-violet-500 hover:bg-violet-700 text-white  py-2 px-4 rounded m-1"
         onClick={props.onClick}
     >
         {props.title}
