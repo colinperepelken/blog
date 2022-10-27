@@ -1,6 +1,7 @@
 import { ParallaxBanner } from 'react-scroll-parallax'
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types'
 import { config } from 'src/config'
+import { Avatar } from './common/Avatar'
 
 export const Banner = () => {
     const background: BannerLayer = {
@@ -17,12 +18,13 @@ export const Banner = () => {
         shouldAlwaysCompleteAnimation: true,
         expanded: false,
         children: (
-            <div className="absolute inset-0 flex items-center justify-center flex-col">
+            <div className="absolute inset-0 bottom-48 flex items-center justify-center flex-col">
+                <Avatar />
                 <h1 className="text-6xl text-white font-extralight">
                     {config.title}
                 </h1>
                 <h2 className="text-2xl mt-2 text-white font-thin">
-                    a blog by Colin
+                    {config.subtitle}
                 </h2>
             </div>
         ),
