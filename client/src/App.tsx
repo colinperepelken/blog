@@ -3,9 +3,9 @@ import Footer from './components/Footer'
 import { Banner } from './components/Banner'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
-import EditPost from './components/screens/EditArticle'
-import Home from './components/screens/Home'
-import SingleArticle from './components/screens/SingleArticle'
+import EditPost from './components/views/EditArticle'
+import Home from './components/views/Home'
+import SingleArticle from './components/views/SingleArticle'
 
 const App = () => {
     return (
