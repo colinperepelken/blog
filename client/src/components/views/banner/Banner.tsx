@@ -2,6 +2,7 @@ import { ParallaxBanner } from 'react-scroll-parallax'
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types'
 import { config } from 'src/config'
 import { Avatar } from '../../common/Avatar'
+import { BannerLinkContainer } from './BannerLinkContainer'
 
 export const Banner = () => {
     const background: BannerLayer = {
@@ -52,15 +53,20 @@ export const Banner = () => {
     }
 
     return (
-        <ParallaxBanner
-            layers={[
-                background,
-                headline,
-                foregroundMountain,
-                foregroundTrees,
-                gradientOverlay,
-            ]}
-            className="h-full"
-        />
+        <div className="h-full w-full">
+            <BannerLinkContainer />
+            <ParallaxBanner
+                layers={[
+                    background,
+                    headline,
+                    foregroundMountain,
+                    foregroundTrees,
+                    gradientOverlay,
+                ]}
+                className="h-full"
+            />
+        </div>
     )
 }
+
+export default Banner
