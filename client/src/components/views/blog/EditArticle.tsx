@@ -1,6 +1,6 @@
 import { IArticleDetails } from '@blog/shared-types'
 import { Link } from 'react-router-dom'
-import ArticleForm from '../form/ArticleForm'
+import ArticleForm from '../../form/ArticleForm'
 
 interface IProps {
     articleId: string

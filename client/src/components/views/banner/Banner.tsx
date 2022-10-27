@@ -1,7 +1,7 @@
 import { ParallaxBanner } from 'react-scroll-parallax'
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types'
 import { config } from 'src/config'
-import { Avatar } from './common/Avatar'
+import { Avatar } from '../../common/Avatar'
 
 export const Banner = () => {
     const background: BannerLayer = {

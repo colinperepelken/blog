@@ -1,6 +1,6 @@
-import ArticleList from '../ArticleList'
+import ArticleList from './ArticleList'
 
-const Home = () => {
+const Blog = () => {
     return (
         <div>
             <ArticleList></ArticleList>
@@ -8,4 +8,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Blog

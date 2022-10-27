@@ -1,7 +1,7 @@
 import { IArticleDetails } from '@blog/shared-types'
 import { useHistory } from 'react-router-dom'
 import { DateTimeFormatter } from 'src/features/DateTimeFormatter'
-import { Card } from './common/Card'
+import { Card } from '../../common/Card'
 
 interface IProps {
     article: IArticleDetails

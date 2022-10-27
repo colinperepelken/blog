@@ -1,11 +1,11 @@
 import React from 'react'
-import Footer from './components/Footer'
-import { Banner } from './components/Banner'
+import Footer from './components/views/Footer'
+import { Banner } from './components/views/banner/Banner'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
-import EditPost from './components/views/EditArticle'
-import Home from './components/views/Home'
-import SingleArticle from './components/views/SingleArticle'
+import EditPost from './components/views/blog/EditArticle'
+import SingleArticle from './components/views/blog/SingleArticle'
+import Blog from './components/views/blog/Blog'
 
 const App = () => {
     return (
@@ -25,7 +25,7 @@ const App = () => {
                                 path="/article/:id/edit"
                                 component={EditPost}
                             />
-                            <Route exact path="/" component={Home} />
+                            <Route exact path="/" component={Blog} />
                         </Switch>
                     </Router>
                 </div>
