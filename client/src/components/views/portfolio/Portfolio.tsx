@@ -1,3 +1,20 @@
-export const Portfolio = () => <h1>Portfolio todo</h1>
+import PortfolioSection from './PortfolioSection'
+import AboutSection from './sections/about/AboutSection'
+import ExperienceSection from './sections/ExperienceSection'
+import ProjectSection from './sections/ProjectSection'
+
+export const Portfolio = () => (
+    <div className="h-full w-full">
+        <PortfolioSection>
+            <AboutSection />
+        </PortfolioSection>
+        <PortfolioSection>
+            <ExperienceSection />
+        </PortfolioSection>
+        <PortfolioSection>
+            <ProjectSection />
+        </PortfolioSection>
+    </div>
+)
 
 export default Portfolio
