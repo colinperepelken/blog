@@ -17,7 +17,7 @@ export const AboutSection = () => (
                         I love riding my bike everywhere I can — to the grocery
                         store, on camping trips, and mountain biking in the
                         surrounding hills. I am passionate about bicycles and
-                        other alternative methods of transportation as means to
+                        alternative methods of transportation as means to
                         improve the lives of others and to save the environment.
                     </p>
                     <p className="my-2">
