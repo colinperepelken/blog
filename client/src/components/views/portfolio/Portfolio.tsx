@@ -1,6 +1,6 @@
 import PortfolioSection from './PortfolioSection'
 import AboutSection from './sections/about/AboutSection'
-import ExperienceSection from './sections/ExperienceSection'
+import ExperienceSection from './sections/experience/ExperienceSection'
 import ProjectSection from './sections/ProjectSection'
 
 export const Portfolio = () => (
