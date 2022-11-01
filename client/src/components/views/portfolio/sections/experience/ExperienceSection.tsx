@@ -17,10 +17,19 @@ export const ExperienceSection = () => (
             </ExperienceCard>
             <ExperienceCard
                 company="Lingel Learning"
-                companyUrl="https://sparelabs.com"
+                companyUrl="https://lingellearning.com"
                 title="Senior Software Engineer"
-                logo="assets/spare-logo.svg"
+                logo="assets/lingel-learning-logo.jpeg"
                 dateString="March 2019 to June 2021"
+            >
+                <p>TODO</p>
+            </ExperienceCard>
+            <ExperienceCard
+                company="Western Canadian Learning Network"
+                companyUrl="https://wcln.ca"
+                title="Software Developer"
+                logo="assets/wcln-logo.png"
+                dateString="May 2016 to September 2020"
             >
                 <p>TODO</p>
             </ExperienceCard>

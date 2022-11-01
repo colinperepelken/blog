@@ -10,11 +10,16 @@ interface IProps {
 export const ExperienceCard = (props: IProps) => (
     <div className="border border-slate-500 hover:border-slate-400 bg-black rounded p-4 w-full my-10">
         <div className="flex">
-            <img className="mr-4 w-12 h-12" src={props.logo} />
+            <img className="mr-4 w-12 h-12 rounded" src={props.logo} />
             <div className="flex flex-col justify-between leading-normal">
                 <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white font-extralight mb-0">
                     <span className="font-light">{props.title}</span> &mdash;{' '}
-                    <a className="text-blue-300" href={props.companyUrl}>
+                    <a
+                        className="text-blue-300"
+                        href={props.companyUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         {props.company}
                     </a>
                 </h5>
