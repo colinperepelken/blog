@@ -34,6 +34,17 @@ export const ExperienceSection = () => (
                 <p>TODO</p>
             </ExperienceCard>
         </div>
+        <div className="text-center">
+            You can view my full resumé and connect with me on{' '}
+            <a
+                href="https://www.linkedin.com/in/colin-perepelken/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-300"
+            >
+                LinkedIn
+            </a>
+        </div>
     </div>
 )
 
