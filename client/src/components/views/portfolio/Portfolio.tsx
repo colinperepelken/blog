@@ -1,7 +1,7 @@
 import PortfolioSection from './PortfolioSection'
 import AboutSection from './sections/about/AboutSection'
 import ExperienceSection from './sections/experience/ExperienceSection'
-import ProjectSection from './sections/ProjectSection'
+import ProjectSection from './sections/project/ProjectSection'
 
 export const Portfolio = () => (
     <div className="h-full w-full">
