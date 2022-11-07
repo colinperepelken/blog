@@ -7,7 +7,7 @@ export interface IProjectCardProps {
 }
 
 export const ProjectCard = (props: IProjectCardProps) => (
-    <div className="max-w-sm bg-black rounded border border-slate-500 hover:border-slate-400">
+    <div className="bg-black rounded border border-slate-500 hover:border-slate-400">
         <img src={props.image} alt="Project image" />
         <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
