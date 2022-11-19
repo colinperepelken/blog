@@ -4,7 +4,7 @@ import ExperienceSection from './sections/experience/ExperienceSection'
 import ProjectSection from './sections/project/ProjectSection'
 
 export const Portfolio = () => (
-    <div className="h-full w-full">
+    <div className="w-full">
         <PortfolioSection>
             <AboutSection />
         </PortfolioSection>
