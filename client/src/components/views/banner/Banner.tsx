@@ -14,8 +14,8 @@ export const Banner = () => {
     }
 
     const headline: BannerLayer = {
-        translateY: [0, 30],
-        scale: [1, 1.05, 'easeOutCubic'],
+        translateY: [0, 40],
+        scale: [1, 0.8, 'easeOutCubic'],
         shouldAlwaysCompleteAnimation: true,
         expanded: false,
         children: (
@@ -32,16 +32,8 @@ export const Banner = () => {
     }
 
     const foregroundMountain: BannerLayer = {
-        image: 'assets/mountain.png',
-        translateY: [0, 15],
+        image: 'assets/mountain2.png',
         scale: [1, 1.1, 'easeOutCubic'],
-        shouldAlwaysCompleteAnimation: true,
-    }
-
-    const foregroundTrees: BannerLayer = {
-        image: 'assets/trees.png',
-        translateY: [15, -20],
-        scale: [1, 1.2, 'easeOutCubic'],
         shouldAlwaysCompleteAnimation: true,
     }
 
@@ -60,7 +52,6 @@ export const Banner = () => {
                     background,
                     headline,
                     foregroundMountain,
-                    foregroundTrees,
                     gradientOverlay,
                 ]}
                 className="h-full"

@@ -12,7 +12,7 @@ export const ExperienceCard = (props: IProps) => (
         <div className="flex">
             <img className="mr-4 w-12 h-12 rounded" src={props.logo} />
             <div className="flex flex-col justify-between leading-normal">
-                <h5 className="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white font-extralight mb-0">
+                <h5 className="text-2xl tracking-tight text-gray-900 dark:text-white font-extralight mb-0">
                     <span className="font-light">{props.title}</span> &mdash;{' '}
                     <a
                         className="text-blue-300"

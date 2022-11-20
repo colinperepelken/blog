@@ -1,7 +1,7 @@
 import ExperienceCard from './ExperienceCard'
 
 export const ExperienceSection = () => (
-    <div className="mx-auto w-full p-6 from-black to-[#220930] bg-gradient-to-b">
+    <div className="mx-auto w-full p-6">
         <h3 className="text-3xl font-extralight text-center mb-10">
             Experience
         </h3>
