@@ -37,6 +37,12 @@ export const Banner = () => {
         shouldAlwaysCompleteAnimation: true,
     }
 
+    const moon: BannerLayer = {
+        image: 'assets/moon2.png',
+        translateY: [0, 50],
+        scale: [1, 0.8, 'easeOutCubic'],
+    }
+
     const gradientOverlay: BannerLayer = {
         opacity: [0, 1],
         shouldAlwaysCompleteAnimation: true,
@@ -50,6 +56,7 @@ export const Banner = () => {
             <ParallaxBanner
                 layers={[
                     background,
+                    moon,
                     headline,
                     foregroundMountain,
                     gradientOverlay,

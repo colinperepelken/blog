@@ -8,6 +8,7 @@ export const AboutSection = () => {
         translateY: [20, -20],
         scale: [1, 1.2, 'easeOutCubic'],
         shouldAlwaysCompleteAnimation: true,
+        className: 'z-50 pointer-events-none',
     }
 
     const gradientOverlay: BannerLayer = {
@@ -17,17 +18,17 @@ export const AboutSection = () => {
         children: (
             <div className="absolute inset-0 bg-gradient-to-b from-black to-orange-900" />
         ),
+        className: 'pointer-events-none',
     }
 
-    const aboutContent: BannerLayer = {
-        opacity: [0.3, 1.5],
-        scale: [0.8, 1, 'easeOutCubic'],
-        shouldAlwaysCompleteAnimation: true,
-        expanded: false,
-        children: (
+    return (
+        <ParallaxBanner
+            layers={[gradientOverlay, foregroundTrees]}
+            className="pt-20"
+        >
             <div className="my-auto h-full mx-20">
                 <div className="grid sm:grid-cols-1 xl:grid-cols-3 gap-20 justify-items-stretch">
-                    <div className="border border-slate-500 hover:border-slate-400 bg-black rounded p-4">
+                    <div className="border-2 border-purple-800 hover:border-purple-400 rounded p-4">
                         <h3 className="text-3xl font-extralight">About</h3>
                         <div className="leading-relaxed font-extralight text-gray-400 p-2">
                             <p className="my-2">
@@ -59,14 +60,7 @@ export const AboutSection = () => {
                     </div>
                 </div>
             </div>
-        ),
-    }
-
-    return (
-        <ParallaxBanner
-            layers={[gradientOverlay, aboutContent, foregroundTrees]}
-            className="h-full mt-52"
-        />
+        </ParallaxBanner>
     )
 }
 

@@ -1,5 +1,7 @@
 export const PortfolioSection = (props: { children?: React.ReactNode }) => (
-    <section className="w-full h-full mx-5 flex">{props.children}</section>
+    <section className="w-full min-h-screen px-5 flex">
+        {props.children}
+    </section>
 )
 
 export default PortfolioSection

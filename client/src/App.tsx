@@ -14,7 +14,7 @@ const App = () => {
             <Router>
                 <ParallaxProvider>
                     <Banner />
-                    <div className="center h-full bg-black pt-9">
+                    <div className="center bg-black pt-9">
                         <Switch>
                             <Route
                                 exact
