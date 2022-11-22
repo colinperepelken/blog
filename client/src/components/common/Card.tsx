@@ -1,3 +1,4 @@
+import BorderedDiv from './BorderedDiv'
 import { IButtonProps } from './Button'
 import { CardImage } from './CardImage'
 
@@ -8,10 +9,10 @@ interface IProps {
     onClick?: () => void
 }
 
-export const Card = (props: IProps) => (
-    <div
+export const StructuredCard = (props: IProps) => (
+    <BorderedDiv
         onClick={props.onClick}
-        className="block p-6 rounded bg-black border border-violet-900 hover:border-violet-400  text-gray-300 hover:cursor-pointer flex-shrink-0"
+        className="block hover:cursor-pointer flex-shrink-0"
     >
         <div className="flex items-center">
             <div className="inline-block">
@@ -27,5 +28,5 @@ export const Card = (props: IProps) => (
                 <div className="block font-extralight">{props.content}</div>
             </div>
         </div>
-    </div>
+    </BorderedDiv>
 )

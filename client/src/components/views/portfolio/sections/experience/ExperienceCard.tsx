@@ -1,3 +1,5 @@
+import BorderedDiv from 'src/components/common/BorderedDiv'
+
 interface IProps {
     company: string
     title: string
@@ -8,7 +10,7 @@ interface IProps {
 }
 
 export const ExperienceCard = (props: IProps) => (
-    <div className="border border-slate-500 hover:border-slate-400 bg-black rounded p-4 w-full my-10">
+    <BorderedDiv className="w-full my-10">
         <div className="flex">
             <img className="mr-4 w-12 h-12 rounded" src={props.logo} />
             <div className="flex flex-col justify-between leading-normal">
@@ -32,7 +34,7 @@ export const ExperienceCard = (props: IProps) => (
         <div className="leading-relaxed font-extralight text-gray-400 p-2">
             <div className="my-2">{props.children}</div>
         </div>
-    </div>
+    </BorderedDiv>
 )
 
 export default ExperienceCard

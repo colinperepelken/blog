@@ -1,5 +1,6 @@
 import { ParallaxBanner } from 'react-scroll-parallax'
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types'
+import BorderedDiv from 'src/components/common/BorderedDiv'
 import { AboutPhotoGallery } from './AboutPhotoGallery'
 
 export const AboutSection = () => {
@@ -28,7 +29,7 @@ export const AboutSection = () => {
         >
             <div className="my-auto h-full mx-20">
                 <div className="grid sm:grid-cols-1 xl:grid-cols-3 gap-20 justify-items-stretch">
-                    <div className="border-2 border-purple-800 hover:border-purple-400 rounded p-4">
+                    <BorderedDiv>
                         <h3 className="text-3xl font-extralight">About</h3>
                         <div className="leading-relaxed font-extralight text-gray-400 p-2">
                             <p className="my-2">
@@ -54,7 +55,7 @@ export const AboutSection = () => {
                                 TypeScript.
                             </p>
                         </div>
-                    </div>
+                    </BorderedDiv>
                     <div className="lg:col-span-2">
                         <AboutPhotoGallery />
                     </div>

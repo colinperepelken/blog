@@ -1,3 +1,5 @@
+import BorderedDiv from 'src/components/common/BorderedDiv'
+
 export interface IProjectCardProps {
     title: string
     description: string
@@ -7,7 +9,7 @@ export interface IProjectCardProps {
 }
 
 export const ProjectCard = (props: IProjectCardProps) => (
-    <div className="bg-black rounded border border-slate-500 hover:border-slate-400">
+    <BorderedDiv>
         <img src={props.image} alt="Project image" />
         <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -31,7 +33,7 @@ export const ProjectCard = (props: IProjectCardProps) => (
                 </a>
             )}
         </div>
-    </div>
+    </BorderedDiv>
 )
 
 export default ProjectCard
