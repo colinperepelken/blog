@@ -17,7 +17,7 @@ export const AboutSection = () => {
         shouldAlwaysCompleteAnimation: true,
         expanded: false,
         children: (
-            <div className="absolute inset-0 bg-gradient-to-b from-black to-orange-900" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black to-secondary-900" />
         ),
         className: 'pointer-events-none',
     }

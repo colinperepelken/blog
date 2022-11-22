@@ -1,6 +1,6 @@
 export const Avatar = () => (
     <img
-        className="inline-block h-20 w-20 rounded-full border-1 border-white shadow-md"
+        className="inline-block h-20 w-20 rounded-full border-4 border-primary-800 shadow-md"
         src="assets/avatar.jpeg"
         alt=""
     />
