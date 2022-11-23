@@ -1,4 +1,4 @@
-import ExperienceCard from './ExperienceCard'
+import ExperienceTimeline from './ExperienceTimeline'
 
 export const ExperienceSection = () => (
     <div className="mx-auto w-full p-6">
@@ -6,7 +6,7 @@ export const ExperienceSection = () => (
             Experience
         </h3>
         <div className="w-5/6 max-w-2xl mx-auto">
-            <ExperienceCard
+            {/* <ExperienceCard
                 company="Spare"
                 companyUrl="https://sparelabs.com"
                 title="Senior Software Engineer"
@@ -32,15 +32,16 @@ export const ExperienceSection = () => (
                 dateString="May 2016 to September 2020"
             >
                 <p>TODO</p>
-            </ExperienceCard>
+            </ExperienceCard> */}
+            <ExperienceTimeline />
         </div>
-        <div className="text-center">
+        <div className="text-center mt-24">
             You can view my full resumé and connect with me on{' '}
             <a
                 href="https://www.linkedin.com/in/colin-perepelken/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-300"
+                className="text-secondary-500"
             >
                 LinkedIn
             </a>
