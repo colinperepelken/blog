@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from './components/views/Footer'
+import Footer from './components/views/footer/Footer'
 import Banner from './components/views/banner/Banner'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'

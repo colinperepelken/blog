@@ -6,6 +6,9 @@ interface IConfig {
     copyrightText: string
     theme: ITheme
     apiHost: string
+    linkedInUrl: string
+    githubUrl: string
+    mailUrl: string
 }
 
 // TODO this could eventually be configurable using an 'admin' UI
@@ -15,4 +18,7 @@ export const config: IConfig = {
     copyrightText: 'Colin Perepelken',
     theme: DefaultTheme,
     apiHost: 'http://localhost:3001',
+    linkedInUrl: 'https://www.linkedin.com/in/colin-perepelken/',
+    githubUrl: 'https://github.com/colinperepelken',
+    mailUrl: 'mailto:colin@perepelken.ca',
 }

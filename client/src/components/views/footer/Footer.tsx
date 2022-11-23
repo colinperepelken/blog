@@ -1,6 +1,9 @@
 import { ParallaxBanner } from 'react-scroll-parallax'
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types'
 import { config } from 'src/config'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import FooterIcon from './FooterIcon'
 
 const Footer = () => {
     const foregroundTrees: BannerLayer = {
@@ -26,12 +29,16 @@ const Footer = () => {
             layers={[gradientOverlay, foregroundTrees]}
             className="pt-20 h-1/2"
         >
-            <footer className="p-3 mt-3 w-full text-center text-lg font-thin text-white">
-                <p>
+            <footer className="p-3 mt-3 w-full text-center text-white">
+                <div className="space-x-10 mt-2">
+                    <FooterIcon href={config.linkedInUrl} icon={faLinkedinIn} />
+                    <FooterIcon href={config.githubUrl} icon={faGithub} />
+                    <FooterIcon href={config.mailUrl} icon={faEnvelope} />
+                </div>
+                <p className="text-lg font-thin mt-3">
                     Copyright &copy; {new Date().getFullYear()}{' '}
                     {config.copyrightText}
                 </p>
-                <p>Todo links here</p>
             </footer>
         </ParallaxBanner>
     )
