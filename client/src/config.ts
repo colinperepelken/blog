@@ -9,6 +9,7 @@ interface IConfig {
     linkedInUrl: string
     githubUrl: string
     mailUrl: string
+    blogEnabled: boolean
 }
 
 // TODO this could eventually be configurable using an 'admin' UI
@@ -21,4 +22,5 @@ export const config: IConfig = {
     linkedInUrl: 'https://www.linkedin.com/in/colin-perepelken/',
     githubUrl: 'https://github.com/colinperepelken',
     mailUrl: 'mailto:colin@perepelken.ca',
+    blogEnabled: false,
 }

@@ -1,3 +1,4 @@
+import Link from 'src/components/common/Link'
 import ExperienceTimeline from './ExperienceTimeline'
 
 export const ExperienceSection = () => (
@@ -37,14 +38,12 @@ export const ExperienceSection = () => (
         </div>
         <div className="text-center mt-24">
             You can view my full resumé and connect with me on{' '}
-            <a
+            <Link
                 href="https://www.linkedin.com/in/colin-perepelken/"
-                target="_blank"
                 rel="noreferrer"
-                className="text-secondary-500"
             >
                 LinkedIn
-            </a>
+            </Link>
         </div>
     </div>
 )
