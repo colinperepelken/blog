@@ -14,22 +14,20 @@ const App = () => {
             <Router>
                 <ParallaxProvider>
                     <Banner />
-                    <div className="center bg-black pt-9">
-                        <Switch>
-                            <Route
-                                exact
-                                path="/article/:id/view"
-                                component={SingleArticle}
-                            />
-                            <Route
-                                exact
-                                path="/article/:id/edit"
-                                component={EditPost}
-                            />
-                            <Route exact path="/blog" component={Blog} />
-                            <Route exact path="/" component={Portfolio} />
-                        </Switch>
-                    </div>
+                    <Switch>
+                        <Route
+                            exact
+                            path="/article/:id/view"
+                            component={SingleArticle}
+                        />
+                        <Route
+                            exact
+                            path="/article/:id/edit"
+                            component={EditPost}
+                        />
+                        <Route exact path="/blog" component={Blog} />
+                        <Route exact path="/" component={Portfolio} />
+                    </Switch>
                     <Footer />
                 </ParallaxProvider>
             </Router>
