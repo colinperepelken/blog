@@ -1,3 +1,7 @@
+import { faAt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'src/components/common/Link'
+
 const ExperienceTimeline = () => {
     const experiences = [
         {
@@ -6,7 +10,33 @@ const ExperienceTimeline = () => {
             company: 'Spare Labs',
             companyUrl: 'https://sparelabs.com',
             dateString: 'July 2021 to Present',
-            description: 'Building the future of transportation...',
+            description: (
+                <>
+                    <p>
+                        Spare builds software that empowers everyone to launch
+                        scalable, affordable and equitable on-demand mobility
+                        services for all.
+                    </p>
+                    <p>
+                        Built with Node.js, Typescript, React, PostgreSQL,
+                        Docker, Kubernetes, GCP and more.
+                    </p>
+                    <p>
+                        On-call responder of the Site Reliability Engineering
+                        (SRE) team. Experience troubleshooting complex
+                        infrastructure issues.
+                    </p>
+                    <p>
+                        Experience leading 30+ technical interviews, evaluating
+                        candidates, and improving our interview processes.
+                    </p>
+                    <p>
+                        Strong teamwork and leadership skills as a reviewer of
+                        technical designs, leader of sprint rituals, and pair
+                        programmer.
+                    </p>
+                </>
+            ),
         },
         {
             logo: 'assets/lingel-learning-logo.jpeg',
@@ -14,15 +44,58 @@ const ExperienceTimeline = () => {
             company: 'Lingel Learning',
             companyUrl: 'https://lingellearning.com',
             dateString: 'April 2019 to June 2021',
-            description: 'Moodle stuff...',
+            description: (
+                <>
+                    <p>
+                        Moodle development (PHP, Vue.js, JavaScript) for client
+                        specific projects including APIs, themes,
+                        authentication, and custom reports.
+                    </p>
+                    <p>
+                        Implemented a SaaS Moodle solution using a load-balanced
+                        AWS infrastructure, to manage client sites in Canada and
+                        Australia.
+                    </p>
+                    <p>
+                        Met with clients, provided support services to
+                        troubleshoot & resolve issues.
+                    </p>
+                    <p>
+                        Managed and mentored Junior Developers. Involved in the
+                        hiring and interview process for multiple positions.
+                    </p>
+                </>
+            ),
         },
         {
             logo: 'assets/wcln-logo.png',
-            title: 'Software Developer (Contract)',
+            title: 'Software Developer',
             company: 'Western Canadian Learning Network',
             companyUrl: 'https://wcln.ca',
-            dateString: 'May 2016 to September 2020',
-            description: 'More Moodle stuff...',
+            dateString: 'May 2016 to September 2020 (Contract)',
+            description: (
+                <>
+                    <p>
+                        Developed an LTI provider to distribute courses to
+                        school districts across Western Canada. The provider
+                        handles millions of student requests every year and has
+                        been integrated into Moodle, Canvas, and D2L.
+                    </p>
+                    <p>
+                        Created a Learning Object Repository using Vue.js to
+                        store and manage 5000+ games, projects, video tutorials,
+                        and learning guides.
+                    </p>
+                    <p>
+                        Developed a Game Creator used by teachers to create 200+
+                        educational resources.
+                    </p>
+                    <p>
+                        Created a Computer Science 11 course in line with the
+                        new BC education curriculum.
+                    </p>
+                </>
+            ),
         },
     ]
 
@@ -49,14 +122,18 @@ const ExperienceTimeline = () => {
                                 <div className="min-w-0 flex-1">
                                     <div>
                                         <div className="text-sm">
-                                            {experience.company}
+                                            {experience.title}{' '}
+                                            <FontAwesomeIcon icon={faAt} />{' '}
+                                            <Link href={experience.companyUrl}>
+                                                {experience.company}
+                                            </Link>
                                         </div>
                                         <p className="mt-0.5 text-sm text-gray-500">
                                             {experience.dateString}
                                         </p>
                                     </div>
-                                    <div className="mt-2 text-sm text-gray-400">
-                                        <p>{experience.description}</p>
+                                    <div className="mt-2 text-sm text-gray-400 space-y-2">
+                                        {experience.description}
                                     </div>
                                 </div>
                             </div>
