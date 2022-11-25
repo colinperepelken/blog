@@ -1,11 +1,25 @@
-import { ParallaxBanner } from 'react-scroll-parallax'
+import { ParallaxBanner, useParallaxController } from 'react-scroll-parallax'
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types'
 import { config } from 'src/config'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import FooterIcon from './FooterIcon'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Footer = () => {
+    // This custom hook updates the controller each time the location changes.
+    // See: https://react-scroll-parallax.damnthat.tv/docs/usage/hooks/use-parallax-controller#example-route-change-hook
+    const useUpdateControllerOnRouteChange = () => {
+        const location = useLocation()
+        const parallaxController = useParallaxController()
+
+        useEffect(() => {
+            parallaxController?.update()
+        }, [location.pathname])
+    }
+    useUpdateControllerOnRouteChange()
+
     const foregroundTrees: BannerLayer = {
         image: 'assets/trees2.png',
         translateY: [30, -15],
