@@ -19,8 +19,17 @@ const projects: IProjectCardProps[] = [
         image: 'assets/projects/blog.png',
     },
     {
+        title: 'Auto Traffic Control',
+        description:
+            "Along with a friend, I've been building a program to run Auto Traffic Control, a video game (not built my me) played by programming. The goal is to create a program that can safely manage the airspace above two airports.",
+        githubUrl:
+            'https://github.com/colinperepelken/auto-traffic-control-server',
+        image: 'assets/projects/auto-traffic-control.png',
+    },
+    {
         title: 'Portfolio Website v1',
-        description: 'My previous portfolio website that is no longer live.',
+        description:
+            'My previous portfolio website that has been replaced by this site.',
         githubUrl: 'https://github.com/colinperepelken/perepelken.ca',
         image: 'assets/projects/old-portfolio.png',
     },

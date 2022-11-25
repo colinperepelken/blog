@@ -20,14 +20,18 @@ export const ProjectCard = (props: IProjectCardProps) => (
             </p>
             <a
                 href={props.githubUrl}
+                target="_blank"
                 className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-secondary-700 rounded-lg hover:bg-secondary-800 focus:ring-4 focus:outline-none focus:ring-secondary-300"
+                rel="noreferrer"
             >
                 Source
             </a>
             {props.liveUrl && (
                 <a
                     href={props.liveUrl}
+                    target="_blank"
                     className="inline-flex items-center ml-2 py-2 px-3 text-sm font-medium text-center text-white bg-secondary-700 rounded-lg hover:bg-secondary-800 focus:ring-4 focus:outline-none focus:ring-secondary-300"
+                    rel="noreferrer"
                 >
                     Live
                 </a>
