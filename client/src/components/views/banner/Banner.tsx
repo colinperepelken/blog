@@ -19,9 +19,9 @@ export const Banner = () => {
         shouldAlwaysCompleteAnimation: true,
         expanded: false,
         children: (
-            <div className="absolute inset-0 bottom-48 flex items-center justify-center flex-col">
+            <div className="absolute inset-0 bottom-48 flex items-center justify-center flex-col text-center">
                 <Avatar />
-                <h1 className="text-6xl text-white font-extralight">
+                <h1 className="text-6xl text-white font-extralight mt-2">
                     {config.title}
                 </h1>
                 <h2 className="text-2xl mt-2 text-white font-thin">
