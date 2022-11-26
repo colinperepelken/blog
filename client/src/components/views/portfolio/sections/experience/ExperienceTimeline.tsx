@@ -114,7 +114,7 @@ const ExperienceTimeline = () => {
                             <div className="relative flex items-start space-x-3">
                                 <div className="relative">
                                     <img
-                                        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-primary-800 mr-4"
+                                        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 ring-8 ring-primary-800 mr-4"
                                         src={experience.logo}
                                         alt={`${experience.company} company logo`}
                                     />

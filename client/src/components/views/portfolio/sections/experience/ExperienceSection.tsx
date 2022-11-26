@@ -10,7 +10,7 @@ export const ExperienceSection = () => (
             <ExperienceTimeline />
         </div>
         <div className="text-center mt-24">
-            You can view my full resumé and connect with me on{' '}
+            You can view my complete resumé and connect with me on{' '}
             <Link
                 href="https://www.linkedin.com/in/colin-perepelken/"
                 rel="noreferrer"

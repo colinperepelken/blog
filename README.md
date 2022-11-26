@@ -9,7 +9,7 @@ A simple blog built with React, Typescript, Node.js and PostgreSQL.
 - ~~Upgrade to react-scripts v5~~
 - ~~Set up Tailwind~~
 - ~~eslint auto-remove unused imports~~
-- Fix WCLN logo
+- ~~Fix WCLN logo~~
 - ~~Fix footer display issues when switching between Blog and Portfolio views~~
-- Ensure website is responsive and works on mobile devices
+- ~~Ensure website is responsive and works on mobile devices~~
 - Continue building the blog portion of the website...
