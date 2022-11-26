@@ -32,7 +32,7 @@ export const Banner = () => {
     }
 
     const foregroundMountain: BannerLayer = {
-        image: 'assets/mountain2.png',
+        image: 'assets/mountain-styled.png',
         scale: [1, 1.1, 'easeOutCubic'],
         shouldAlwaysCompleteAnimation: true,
     }
