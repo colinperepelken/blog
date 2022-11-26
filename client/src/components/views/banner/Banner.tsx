@@ -35,6 +35,7 @@ export const Banner = () => {
         image: 'assets/mountain-styled.png',
         scale: [1, 1.1, 'easeOutCubic'],
         shouldAlwaysCompleteAnimation: true,
+        className: 'pointer-events-none',
     }
 
     const gradientOverlay: BannerLayer = {
@@ -42,6 +43,7 @@ export const Banner = () => {
         shouldAlwaysCompleteAnimation: true,
         expanded: false,
         children: <div className="absolute inset-0 bg-black" />,
+        className: 'pointer-events-none',
     }
 
     return (
