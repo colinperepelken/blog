@@ -3,8 +3,8 @@ import { AboutPhotoGallery } from './AboutPhotoGallery'
 
 export const AboutSection = () => {
     return (
-        <div className="my-auto h-full mx-20">
-            <div className="grid sm:grid-cols-1 xl:grid-cols-3 gap-20 justify-items-stretch">
+        <div className="my-auto h-full 2xl:mx-20 xl:mx-5">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-20 justify-items-center">
                 <BorderedDiv>
                     <h3 className="text-3xl font-extralight">About</h3>
                     <div className="leading-relaxed font-extralight text-gray-400 p-2">
@@ -32,7 +32,7 @@ export const AboutSection = () => {
                         </p>
                     </div>
                 </BorderedDiv>
-                <div className="lg:col-span-2">
+                <div className="xl:col-span-2 min-w-full">
                     <AboutPhotoGallery />
                 </div>
             </div>

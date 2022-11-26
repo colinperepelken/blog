@@ -1,7 +1,7 @@
 import GalleryImage from './GalleryImage'
 
 export const AboutPhotoGallery = () => (
-    <div className="container h-full">
+    <div className="container h-full min-w-full">
         <div className="flex flex-wrap h-full">
             <div className="flex flex-wrap w-1/2">
                 <div className="w-1/2 p-1">
