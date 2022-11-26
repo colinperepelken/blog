@@ -27,13 +27,6 @@ const projects: IProjectCardProps[] = [
         image: 'assets/projects/auto-traffic-control.png',
     },
     {
-        title: 'Portfolio Website v1',
-        description:
-            'My previous portfolio website that has been replaced by this site.',
-        githubUrl: 'https://github.com/colinperepelken/perepelken.ca',
-        image: 'assets/projects/old-portfolio.png',
-    },
-    {
         title: 'LTI Provider for Canadian School Districts',
         description:
             'A Learning Tools Interoperability (LTI) provider that allows access to elementary through highschool courses to school districts across Western Canada. The provider handles millions of student requests for resources every year and has been integrated into Moodle, Canvas, and D2L.',
