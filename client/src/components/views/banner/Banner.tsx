@@ -39,7 +39,6 @@ export const Banner = () => {
 
     const moon: BannerLayer = {
         image: 'assets/moon.png',
-        translateY: [0, 50],
         scale: [1, 0.8, 'easeOutCubic'],
     }
 
