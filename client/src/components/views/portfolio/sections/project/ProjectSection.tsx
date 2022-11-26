@@ -53,7 +53,7 @@ const projects: IProjectCardProps[] = [
 export const ProjectSection = () => (
     <div className="mx-auto w-full p-6">
         <h3 className="text-3xl font-extralight text-center mb-10">Projects</h3>
-        <div className="grid grid-cols-3 gap-9 mx-auto max-w-6xl">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 mx-auto max-w-6xl">
             {projects.map((project) => (
                 <ProjectCard key={project.title} {...project} />
             ))}
