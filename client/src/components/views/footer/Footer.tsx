@@ -15,7 +15,9 @@ const Footer = () => {
         const parallaxController = useParallaxController()
 
         useEffect(() => {
-            parallaxController?.update()
+            setTimeout(() => {
+                parallaxController?.update()
+            }, 500)
         }, [location.pathname])
     }
     useUpdateControllerOnRouteChange()
