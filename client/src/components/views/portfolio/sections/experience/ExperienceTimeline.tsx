@@ -13,13 +13,10 @@ const ExperienceTimeline = () => {
             description: (
                 <>
                     <p>
-                        Spare builds software that empowers everyone to launch
-                        scalable, affordable and equitable on-demand mobility
-                        services for all.
-                    </p>
-                    <p>
-                        Built with Node.js, Typescript, React, PostgreSQL,
-                        Docker, Kubernetes, GCP and more.
+                        Working across the stack to add new features to our
+                        rider & driver mobile apps, admin web platform, API, and
+                        micro-services using TypeScript, Node.js, React.js,
+                        PostgreSQL, GCP and more.
                     </p>
                     <p>
                         On-call responder of the Site Reliability Engineering
@@ -27,7 +24,7 @@ const ExperienceTimeline = () => {
                         infrastructure issues.
                     </p>
                     <p>
-                        Experience leading 30+ technical interviews, evaluating
+                        Experience leading technical interviews, evaluating
                         candidates, and improving our interview processes.
                     </p>
                     <p>
@@ -47,18 +44,18 @@ const ExperienceTimeline = () => {
             description: (
                 <>
                     <p>
-                        Moodle development (PHP, Vue.js, JavaScript) for client
-                        specific projects including APIs, themes,
-                        authentication, and custom reports.
+                        Developed themes, authentication plugins, custom
+                        reports, and learning modules using PHP, Vue.js, and
+                        JavaScript to client specifications.
                     </p>
                     <p>
-                        Implemented a SaaS Moodle solution using a load-balanced
-                        AWS infrastructure, to manage client sites in Canada and
-                        Australia.
+                        Deployed a SaaS Moodle solution using a load-balanced
+                        AWS infrastructure, to better manage client sites in
+                        Canada and Australia.
                     </p>
                     <p>
-                        Met with clients, provided support services to
-                        troubleshoot & resolve issues.
+                        Gathered requirements from clients, and provided support
+                        services to troubleshoot & resolve issues.
                     </p>
                     <p>
                         Managed and mentored Junior Developers. Involved in the

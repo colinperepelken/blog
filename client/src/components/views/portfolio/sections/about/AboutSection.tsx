@@ -7,15 +7,22 @@ export const AboutSection = () => {
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-20 justify-items-center max-w-[1800px]">
                 <BorderedDiv>
                     <h3 className="text-3xl font-extralight">About</h3>
-                    <div className="leading-relaxed font-extralight text-gray-400 p-2">
-                        <p className="my-2">
+                    <div className="leading-relaxed font-extralight text-gray-400 p-2 space-y-2">
+                        <p>
+                            An enthusiastic software engineer who strives to
+                            make the world a better, more sustainable place.
+                            I&apos;m passionate about contributing to solutions
+                            that derive real-world change, and positively affect
+                            the lives of others.
+                        </p>
+                        <p>
                             I am very lucky to live in beautiful Kelowna, BC
                             with my wonderful wife and my energetic dog Goose. I
                             graduated from the University of British Columbia
                             (UBCO) in 2018 and have been enjoying my work as a
                             software engineer since.
                         </p>
-                        <p className="my-2">
+                        <p>
                             I love riding my bike everywhere I can — to the
                             grocery store, on camping trips, and mountain biking
                             in the surrounding hills. I am passionate about
@@ -23,12 +30,10 @@ export const AboutSection = () => {
                             as means to improve the lives of others and to save
                             the environment.
                         </p>
-                        <p className="my-2">
+                        <p>
                             I am currently working with Spare to build the
-                            future of sustainable transportation. I am a
-                            software engineer on the Launch team, and work
-                            across the stack using Node.js, React, and
-                            TypeScript.
+                            future of sustainable transportation using Node.js,
+                            React.js, and TypeScript.
                         </p>
                     </div>
                 </BorderedDiv>
