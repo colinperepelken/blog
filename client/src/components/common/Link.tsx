@@ -4,7 +4,7 @@ const Link = (
         HTMLAnchorElement
     >,
 ) => (
-    <a className="text-secondary-500" target="_blank" {...props}>
+    <a className="text-primary-500" target="_blank" {...props}>
         {props.children}
     </a>
 )

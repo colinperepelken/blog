@@ -3,11 +3,13 @@ import { AboutPhotoGallery } from './AboutPhotoGallery'
 
 export const AboutSection = () => {
     return (
-        <div className="h-full m-auto">
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-20 justify-items-center max-w-[1800px]">
-                <BorderedDiv>
-                    <h3 className="text-3xl font-extralight">About</h3>
-                    <div className="leading-relaxed font-extralight text-gray-400 p-2 space-y-2">
+        <div className="mx-auto w-full p-6">
+            <div className="gap-20 justify-items-center">
+                <div>
+                    <h3 className="text-3xl font-extralight text-center mb-10">
+                        About
+                    </h3>
+                    <div className="leading-relaxed font-extralight text-black p-2 space-y-2">
                         <p>
                             An enthusiastic software engineer who strives to
                             make the world a better, more sustainable place.
@@ -36,7 +38,7 @@ export const AboutSection = () => {
                             React.js, and TypeScript.
                         </p>
                     </div>
-                </BorderedDiv>
+                </div>
                 <div className="xl:col-span-2 min-w-full">
                     <AboutPhotoGallery />
                 </div>

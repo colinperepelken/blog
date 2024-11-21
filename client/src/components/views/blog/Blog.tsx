@@ -7,7 +7,7 @@ import Link from 'src/components/common/Link'
 const Blog = () => {
     return (
         <div className="h-[400px]">
-            {config.blogEnabled ? (
+            {config.isBlogEnabled ? (
                 <ArticleList />
             ) : (
                 <div className="mt-5">

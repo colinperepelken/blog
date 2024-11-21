@@ -20,6 +20,6 @@ npm install ../shared-types
 ## Updating types
 
 1. Make your changes
-2. Run `yarn build`
+2. Run `npm build`
 
 // todo

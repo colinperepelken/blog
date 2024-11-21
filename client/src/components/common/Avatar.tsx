@@ -1,7 +1,7 @@
 export const Avatar = () => (
     <img
-        className="inline-block h-20 w-20 rounded-full ring-8 ring-primary-800/80 hover:ring-primary-800 shadow-md"
-        src="assets/avatar.jpeg"
+        className="inline-block h-36 w-36 rounded-full ring-8 ring-primary-300 shadow-md"
+        src="assets/avatar.png"
         alt=""
     />
 )

@@ -6,7 +6,7 @@ const BorderedDiv = (
 ) => (
     <div
         {...props}
-        className={`border-2 border-primary-800 hover:border-primary-400 rounded p-4 ${props.className}`}
+        className={`border-2 border-secondary-300 p-4 ${props.className}`}
     >
         {props.children}
     </div>

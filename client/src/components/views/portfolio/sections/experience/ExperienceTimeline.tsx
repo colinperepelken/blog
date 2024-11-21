@@ -6,60 +6,59 @@ const ExperienceTimeline = () => {
     const experiences = [
         {
             logo: 'assets/spare-logo.svg',
-            title: 'Senior Software Engineer',
-            company: 'Spare Labs',
-            companyUrl: 'https://sparelabs.com',
+            title: 'Staff Software Developer',
+            company: 'Spare',
+            companyUrl: 'https://spare.com',
             dateString: 'July 2021 to Present',
             description: (
                 <>
                     <p>
-                        Working across the stack to add new features to our
-                        rider & driver mobile apps, admin web platform, API, and
-                        micro-services using TypeScript, Node.js, React.js,
+                        Worked across the stack to add new features to our rider
+                        and driver mobile apps, web platform, API, and backend
+                        microservices using TypeScript, Node.js, React.js,
                         PostgreSQL, GCP and more.
                     </p>
                     <p>
+                        Implemented integrations with Lyft and Uber, enabling
+                        transit agencies to accept overflow trips. .
+                    </p>
+                    <p>
+                        Designed and built Spare’s event-driven architecture
+                        which utilizes a Pub/Sub implementation to process
+                        millions of events, and serves as the foundation of
+                        Spare’s Activity Log.
+                    </p>
+                    <p>
+                        Performed database schema refactors and data migrations
+                        affecting millions of riders with zero downtime.
+                    </p>
+                    <p>
                         On-call responder of the Site Reliability Engineering
-                        (SRE) team. Experience troubleshooting complex
-                        infrastructure issues.
-                    </p>
-                    <p>
-                        Experience leading technical interviews, evaluating
-                        candidates, and improving our interview processes.
-                    </p>
-                    <p>
-                        Strong teamwork and leadership skills as a reviewer of
-                        technical designs, leader of sprint rituals, and pair
-                        programmer.
+                        (SRE) team.
                     </p>
                 </>
             ),
         },
         {
             logo: 'assets/lingel-learning-logo.jpeg',
-            title: 'Senior Software Engineer',
+            title: 'Senior Software Developer',
             company: 'Lingel Learning',
             companyUrl: 'https://lingellearning.com',
             dateString: 'April 2019 to June 2021',
             description: (
                 <>
                     <p>
-                        Developed themes, authentication plugins, custom
-                        reports, and learning modules using PHP, Vue.js, and
-                        JavaScript to client specifications.
+                        Developed Moodle themes, authentication plugins, custom
+                        reports, and learning modules using PHP, Laravel,
+                        Vue.js, and JavaScript.
                     </p>
                     <p>
-                        Deployed a SaaS Moodle solution using a load-balanced
-                        AWS infrastructure, to better manage client sites in
-                        Canada and Australia.
+                        Created a SaaS version of Moodle to facilitate easier
+                        onboarding and updating of hosted client sites.
                     </p>
                     <p>
-                        Gathered requirements from clients, and provided support
-                        services to troubleshoot & resolve issues.
-                    </p>
-                    <p>
-                        Managed and mentored Junior Developers. Involved in the
-                        hiring and interview process for multiple positions.
+                        Managed and mentored a team of Junior Software Engineers
+                        across multiple timezones.
                     </p>
                 </>
             ),
@@ -73,10 +72,10 @@ const ExperienceTimeline = () => {
             description: (
                 <>
                     <p>
-                        Developed an LTI provider to distribute courses to
-                        school districts across Western Canada. The provider
-                        handles millions of student requests every year and has
-                        been integrated into Moodle, Canvas, and D2L.
+                        Developed a full stack LTI provider which enables 80+
+                        school districts in Western Canada to integrate courses
+                        developed by WCLN into their own learning management
+                        systems.
                     </p>
                     <p>
                         Created a Learning Object Repository using Vue.js to
@@ -94,6 +93,22 @@ const ExperienceTimeline = () => {
                 </>
             ),
         },
+        {
+            logo: 'assets/vertigis-logo.jpg',
+            title: 'Software Developer',
+            company: 'Latitude Geographics',
+            companyUrl: 'https://vertigisstudio.com/',
+            dateString: 'May 2018 to August 2018',
+            description: (
+                <>
+                    <p>
+                        Developed web Geographic Information Systems (GIS) and
+                        custom workflows for clients in various industries using
+                        C#, .NET, and TypeScript.
+                    </p>
+                </>
+            ),
+        },
     ]
 
     return (
@@ -104,14 +119,14 @@ const ExperienceTimeline = () => {
                         <div className="relative pb-8">
                             {index !== experiences.length - 1 ? (
                                 <span
-                                    className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-primary-800"
+                                    className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-primary-300"
                                     aria-hidden="true"
                                 />
                             ) : null}
                             <div className="relative flex items-start space-x-3">
                                 <div className="relative">
                                     <img
-                                        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 ring-8 ring-primary-800 mr-4"
+                                        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 mr-4"
                                         src={experience.logo}
                                         alt={`${experience.company} company logo`}
                                     />
@@ -119,17 +134,16 @@ const ExperienceTimeline = () => {
                                 <div className="min-w-0 flex-1">
                                     <div>
                                         <div className="text-sm">
-                                            {experience.title}{' '}
-                                            <FontAwesomeIcon icon={faAt} />{' '}
+                                            {experience.title} @{' '}
                                             <Link href={experience.companyUrl}>
                                                 {experience.company}
                                             </Link>
                                         </div>
-                                        <p className="mt-0.5 text-sm text-gray-500">
+                                        <p className="mt-0.5 text-sm text-secondary-600">
                                             {experience.dateString}
                                         </p>
                                     </div>
-                                    <div className="mt-2 text-sm text-gray-400 space-y-2">
+                                    <div className="mt-2 text-sm text-secondary-500 space-y-2">
                                         {experience.description}
                                     </div>
                                 </div>

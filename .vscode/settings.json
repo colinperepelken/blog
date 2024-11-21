@@ -11,8 +11,12 @@
   "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "tailwindCSS.includeLanguages": { "plaintext": "javascript" },
-  "files.associations": { "*.css": "postcss" }
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "javascript"
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  }
 }

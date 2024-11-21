@@ -3,13 +3,7 @@
 @tailwind utilities;
 
 #root,
-.App,
 body,
-html {
+.App {
     height: 100%;
-}
-
-body,
-html {
-    background-color: black;
 }
