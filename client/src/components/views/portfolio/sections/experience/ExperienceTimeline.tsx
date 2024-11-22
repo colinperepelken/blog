@@ -20,7 +20,7 @@ const ExperienceTimeline = () => {
                     </p>
                     <p>
                         Implemented integrations with Lyft and Uber, enabling
-                        transit agencies to accept overflow trips. .
+                        transit agencies to accept overflow trips.
                     </p>
                     <p>
                         Designed and built Spare’s event-driven architecture
