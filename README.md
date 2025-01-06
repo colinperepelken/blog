@@ -4,8 +4,7 @@
 
 My portfolio website and blog built with React.js, TypeScript, Node.js and PostgreSQL.
 
-<img width="1504" alt="Screen Shot 2022-11-27 at 10 57 11 AM" src="https://user-images.githubusercontent.com/10641158/204154476-53ef6377-d29a-487d-a24c-eae4be18dc2b.png">
-
+![image](https://github.com/user-attachments/assets/5e7db070-d0f3-409a-9b97-48a4f8993674)
 
 ## Running locally
 
